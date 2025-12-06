@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="ur" dir="rtl" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-intro-physical-ai/sensor-systems" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.1.0">
+<title data-rh="true">Sensor Systems | Physical AI &amp; Humanoid Robotics Textbook</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://reckonfx.github.io/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://reckonfx.github.io/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://reckonfx.github.io/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/docs/intro-physical-ai/sensor-systems"><meta data-rh="true" property="og:locale" content="ur"><meta data-rh="true" property="og:locale:alternate" content="en"><meta data-rh="true" name="docusaurus_locale" content="ur"><meta data-rh="true" name="docsearch:language" content="ur"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Sensor Systems | Physical AI &amp; Humanoid Robotics Textbook"><meta data-rh="true" name="description" content="Introduction to Sensor Systems"><meta data-rh="true" property="og:description" content="Introduction to Sensor Systems"><link data-rh="true" rel="icon" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://reckonfx.github.io/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/docs/intro-physical-ai/sensor-systems"><link data-rh="true" rel="alternate" href="https://reckonfx.github.io/hackathon1-Agenticai-Physical-Ai-Humanoid/docs/intro-physical-ai/sensor-systems" hreflang="en"><link data-rh="true" rel="alternate" href="https://reckonfx.github.io/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/docs/intro-physical-ai/sensor-systems" hreflang="ur"><link data-rh="true" rel="alternate" href="https://reckonfx.github.io/hackathon1-Agenticai-Physical-Ai-Humanoid/docs/intro-physical-ai/sensor-systems" hreflang="x-default"><link rel="stylesheet" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/assets/css/styles.b1d3fbd4.css">
+<script src="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/assets/js/runtime~main.b2fc2af6.js" defer="defer"></script>
+<script src="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/assets/js/main.2e77cea3.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/"><div class="navbar__logo"><img src="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/img/logo.svg" alt="Physical AI Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/img/logo.svg" alt="Physical AI Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Physical AI &amp; Humanoid Robotics</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/docs/intro-physical-ai/what-is-physical-ai">Textbook</a></div><div class="navbar__items navbar__items--right"><a href="https://github.com/reckonfx/hackathon1-Agenticai-Physical-Ai-Humanoid" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" aria-expanded="true" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/docs/intro-physical-ai/what-is-physical-ai">Introduction &amp; Physical AI Foundations</a></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/docs/intro-physical-ai/what-is-physical-ai">What is Physical AI?</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/docs/intro-physical-ai/embodied-intelligence">Embodied Intelligence</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/docs/intro-physical-ai/humanoid-robotics-landscape">Humanoid Robotics Landscape</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/docs/intro-physical-ai/sensor-systems">Sensor Systems</a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/docs/ros2-fundamentals/ros2-architecture">ROS 2 Fundamentals</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/docs/robot-simulation/gazebo-setup">Robot Simulation</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/docs/nvidia-isaac/isaac-sim-overview">NVIDIA Isaac Platform</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/docs/humanoid-development/humanoid-kinematics">Humanoid Robot Development</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/docs/vla-robotics/what-is-vla">VLA Robotics</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/docs/capstone-project/requirements">Capstone Project</a></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><span class="breadcrumbs__link">Introduction &amp; Physical AI Foundations</span><meta itemprop="position" content="1"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">Sensor Systems</span><meta itemprop="position" content="2"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><h1>Sensor Systems in Physical AI and Humanoid Robotics</h1>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="introduction-to-sensor-systems">Introduction to Sensor Systems<a href="#introduction-to-sensor-systems" class="hash-link" aria-label="Direct link to Introduction to Sensor Systems" title="Direct link to Introduction to Sensor Systems">​</a></h2>
+<p>Sensor systems form the foundation of perception in Physical AI and humanoid robotics. These systems enable robots to gather information about their environment and internal state, which is essential for intelligent behavior and interaction. Unlike traditional computing systems that process abstract data, sensor systems in Physical AI must handle real-world signals that are often noisy, incomplete, and uncertain. The design and integration of sensor systems is therefore critical to the success of embodied intelligent systems.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="categories-of-sensors">Categories of Sensors<a href="#categories-of-sensors" class="hash-link" aria-label="Direct link to Categories of Sensors" title="Direct link to Categories of Sensors">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="proprioceptive-sensors">Proprioceptive Sensors<a href="#proprioceptive-sensors" class="hash-link" aria-label="Direct link to Proprioceptive Sensors" title="Direct link to Proprioceptive Sensors">​</a></h3>
+<p>Proprioceptive sensors provide information about the robot&#x27;s internal state:</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="joint-position-sensors">Joint Position Sensors<a href="#joint-position-sensors" class="hash-link" aria-label="Direct link to Joint Position Sensors" title="Direct link to Joint Position Sensors">​</a></h4>
+<ul>
+<li><strong>Encoders</strong>: Measure joint angles with high precision</li>
+<li><strong>Potentiometers</strong>: Provide analog position feedback</li>
+<li><strong>Resolvers</strong>: Robust position sensing for harsh environments</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="inertial-measurement-units-imus">Inertial Measurement Units (IMUs)<a href="#inertial-measurement-units-imus" class="hash-link" aria-label="Direct link to Inertial Measurement Units (IMUs)" title="Direct link to Inertial Measurement Units (IMUs)">​</a></h4>
+<ul>
+<li><strong>Accelerometers</strong>: Measure linear acceleration</li>
+<li><strong>Gyroscopes</strong>: Measure angular velocity</li>
+<li><strong>Magnetometers</strong>: Provide orientation relative to magnetic field</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="forcetorque-sensors">Force/Torque Sensors<a href="#forcetorque-sensors" class="hash-link" aria-label="Direct link to Force/Torque Sensors" title="Direct link to Force/Torque Sensors">​</a></h4>
+<ul>
+<li><strong>Six-axis force/torque sensors</strong>: Measure forces and torques in all directions</li>
+<li><strong>Tactile sensors</strong>: Detect contact and pressure distribution</li>
+<li><strong>Joint torque sensors</strong>: Measure forces at individual joints</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="exteroceptive-sensors">Exteroceptive Sensors<a href="#exteroceptive-sensors" class="hash-link" aria-label="Direct link to Exteroceptive Sensors" title="Direct link to Exteroceptive Sensors">​</a></h3>
+<p>Exteroceptive sensors provide information about the external environment:</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="vision-systems">Vision Systems<a href="#vision-systems" class="hash-link" aria-label="Direct link to Vision Systems" title="Direct link to Vision Systems">​</a></h4>
+<ul>
+<li><strong>Cameras</strong>: RGB, stereo, and multi-spectral imaging</li>
+<li><strong>Depth sensors</strong>: Time-of-flight, structured light, and stereo vision</li>
+<li><strong>Event cameras</strong>: High-speed dynamic vision sensors</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="range-sensors">Range Sensors<a href="#range-sensors" class="hash-link" aria-label="Direct link to Range Sensors" title="Direct link to Range Sensors">​</a></h4>
+<ul>
+<li><strong>LIDAR</strong>: Light Detection and Ranging for 3D mapping</li>
+<li><strong>Ultrasonic sensors</strong>: Short-range distance measurement</li>
+<li><strong>Infrared sensors</strong>: Proximity and distance detection</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="auditory-systems">Auditory Systems<a href="#auditory-systems" class="hash-link" aria-label="Direct link to Auditory Systems" title="Direct link to Auditory Systems">​</a></h4>
+<ul>
+<li><strong>Microphones</strong>: Sound capture and localization</li>
+<li><strong>Audio processing</strong>: Speech recognition and environmental sound analysis</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="sensor-integration-challenges">Sensor Integration Challenges<a href="#sensor-integration-challenges" class="hash-link" aria-label="Direct link to Sensor Integration Challenges" title="Direct link to Sensor Integration Challenges">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="sensor-fusion">Sensor Fusion<a href="#sensor-fusion" class="hash-link" aria-label="Direct link to Sensor Fusion" title="Direct link to Sensor Fusion">​</a></h3>
+<p>Combining data from multiple sensors is essential for robust perception:</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="data-level-fusion">Data-Level Fusion<a href="#data-level-fusion" class="hash-link" aria-label="Direct link to Data-Level Fusion" title="Direct link to Data-Level Fusion">​</a></h4>
+<ul>
+<li><strong>Synchronization</strong>: Aligning sensor data in time</li>
+<li><strong>Calibration</strong>: Ensuring consistent coordinate systems</li>
+<li><strong>Preprocessing</strong>: Filtering and conditioning sensor signals</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="feature-level-fusion">Feature-Level Fusion<a href="#feature-level-fusion" class="hash-link" aria-label="Direct link to Feature-Level Fusion" title="Direct link to Feature-Level Fusion">​</a></h4>
+<ul>
+<li><strong>Feature extraction</strong>: Identifying relevant patterns in sensor data</li>
+<li><strong>Dimensionality reduction</strong>: Managing computational complexity</li>
+<li><strong>Cross-modal correlation</strong>: Identifying relationships between sensor types</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="decision-level-fusion">Decision-Level Fusion<a href="#decision-level-fusion" class="hash-link" aria-label="Direct link to Decision-Level Fusion" title="Direct link to Decision-Level Fusion">​</a></h4>
+<ul>
+<li><strong>Voting mechanisms</strong>: Combining decisions from different sensors</li>
+<li><strong>Confidence weighting</strong>: Prioritizing more reliable sensor data</li>
+<li><strong>Context-dependent fusion</strong>: Adapting fusion strategies to situation</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="calibration-and-synchronization">Calibration and Synchronization<a href="#calibration-and-synchronization" class="hash-link" aria-label="Direct link to Calibration and Synchronization" title="Direct link to Calibration and Synchronization">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="spatial-calibration">Spatial Calibration<a href="#spatial-calibration" class="hash-link" aria-label="Direct link to Spatial Calibration" title="Direct link to Spatial Calibration">​</a></h4>
+<ul>
+<li><strong>Extrinsic calibration</strong>: Determining relative positions of sensors</li>
+<li><strong>Intrinsic calibration</strong>: Characterizing internal sensor parameters</li>
+<li><strong>Hand-eye calibration</strong>: Relating sensor data to robot coordinate system</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="temporal-synchronization">Temporal Synchronization<a href="#temporal-synchronization" class="hash-link" aria-label="Direct link to Temporal Synchronization" title="Direct link to Temporal Synchronization">​</a></h4>
+<ul>
+<li><strong>Hardware synchronization</strong>: Using common clock signals</li>
+<li><strong>Software timestamping</strong>: Precise time-stamping of sensor data</li>
+<li><strong>Latency compensation</strong>: Accounting for different sensor delays</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="vision-systems-in-humanoid-robots">Vision Systems in Humanoid Robots<a href="#vision-systems-in-humanoid-robots" class="hash-link" aria-label="Direct link to Vision Systems in Humanoid Robots" title="Direct link to Vision Systems in Humanoid Robots">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="camera-systems">Camera Systems<a href="#camera-systems" class="hash-link" aria-label="Direct link to Camera Systems" title="Direct link to Camera Systems">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="stereo-vision">Stereo Vision<a href="#stereo-vision" class="hash-link" aria-label="Direct link to Stereo Vision" title="Direct link to Stereo Vision">​</a></h4>
+<ul>
+<li><strong>Principle</strong>: Depth estimation from parallax between two cameras</li>
+<li><strong>Advantages</strong>: Real-time depth estimation, no active illumination</li>
+<li><strong>Challenges</strong>: Requires texture in scene, affected by lighting</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="rgb-d-cameras">RGB-D Cameras<a href="#rgb-d-cameras" class="hash-link" aria-label="Direct link to RGB-D Cameras" title="Direct link to RGB-D Cameras">​</a></h4>
+<ul>
+<li><strong>Integration</strong>: Combining color and depth information</li>
+<li><strong>Applications</strong>: Object recognition, scene understanding, navigation</li>
+<li><strong>Limitations</strong>: Range limitations, sensitivity to lighting</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="visual-processing-pipelines">Visual Processing Pipelines<a href="#visual-processing-pipelines" class="hash-link" aria-label="Direct link to Visual Processing Pipelines" title="Direct link to Visual Processing Pipelines">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="preprocessing">Preprocessing<a href="#preprocessing" class="hash-link" aria-label="Direct link to Preprocessing" title="Direct link to Preprocessing">​</a></h4>
+<ul>
+<li><strong>Distortion correction</strong>: Removing lens distortions</li>
+<li><strong>Color space conversion</strong>: Converting between color representations</li>
+<li><strong>Noise reduction</strong>: Filtering sensor noise and artifacts</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="feature-extraction">Feature Extraction<a href="#feature-extraction" class="hash-link" aria-label="Direct link to Feature Extraction" title="Direct link to Feature Extraction">​</a></h4>
+<ul>
+<li><strong>Edge detection</strong>: Identifying object boundaries</li>
+<li><strong>Corner detection</strong>: Finding distinctive image points</li>
+<li><strong>Blob detection</strong>: Identifying regions of interest</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="object-recognition">Object Recognition<a href="#object-recognition" class="hash-link" aria-label="Direct link to Object Recognition" title="Direct link to Object Recognition">​</a></h4>
+<ul>
+<li><strong>Template matching</strong>: Comparing to known object models</li>
+<li><strong>Feature-based recognition</strong>: Using learned features for identification</li>
+<li><strong>Deep learning approaches</strong>: Convolutional neural networks for recognition</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="tactile-sensing">Tactile Sensing<a href="#tactile-sensing" class="hash-link" aria-label="Direct link to Tactile Sensing" title="Direct link to Tactile Sensing">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="tactile-sensor-technologies">Tactile Sensor Technologies<a href="#tactile-sensor-technologies" class="hash-link" aria-label="Direct link to Tactile Sensor Technologies" title="Direct link to Tactile Sensor Technologies">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="resistive-sensors">Resistive Sensors<a href="#resistive-sensors" class="hash-link" aria-label="Direct link to Resistive Sensors" title="Direct link to Resistive Sensors">​</a></h4>
+<ul>
+<li><strong>Principle</strong>: Resistance changes with applied pressure</li>
+<li><strong>Applications</strong>: Contact detection and force measurement</li>
+<li><strong>Characteristics</strong>: Simple, robust, but limited resolution</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="capacitive-sensors">Capacitive Sensors<a href="#capacitive-sensors" class="hash-link" aria-label="Direct link to Capacitive Sensors" title="Direct link to Capacitive Sensors">​</a></h4>
+<ul>
+<li><strong>Principle</strong>: Capacitance changes with proximity/contact</li>
+<li><strong>Applications</strong>: Proximity sensing, object detection</li>
+<li><strong>Characteristics</strong>: Sensitive, can detect non-conductive objects</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="piezoelectric-sensors">Piezoelectric Sensors<a href="#piezoelectric-sensors" class="hash-link" aria-label="Direct link to Piezoelectric Sensors" title="Direct link to Piezoelectric Sensors">​</a></h4>
+<ul>
+<li><strong>Principle</strong>: Electric charge generation under mechanical stress</li>
+<li><strong>Applications</strong>: Dynamic force and vibration measurement</li>
+<li><strong>Characteristics</strong>: Good for dynamic measurements, no static response</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="tactile-perception">Tactile Perception<a href="#tactile-perception" class="hash-link" aria-label="Direct link to Tactile Perception" title="Direct link to Tactile Perception">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="contact-detection">Contact Detection<a href="#contact-detection" class="hash-link" aria-label="Direct link to Contact Detection" title="Direct link to Contact Detection">​</a></h4>
+<ul>
+<li><strong>Threshold-based detection</strong>: Simple contact/no-contact determination</li>
+<li><strong>Pattern recognition</strong>: Identifying contact patterns and shapes</li>
+<li><strong>Force distribution</strong>: Understanding contact force distribution</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="material-recognition">Material Recognition<a href="#material-recognition" class="hash-link" aria-label="Direct link to Material Recognition" title="Direct link to Material Recognition">​</a></h4>
+<ul>
+<li><strong>Texture analysis</strong>: Identifying surface properties</li>
+<li><strong>Stiffness estimation</strong>: Determining object compliance</li>
+<li><strong>Thermal properties</strong>: Sensing temperature and heat transfer</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="auditory-systems-1">Auditory Systems<a href="#auditory-systems-1" class="hash-link" aria-label="Direct link to Auditory Systems" title="Direct link to Auditory Systems">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="microphone-arrays">Microphone Arrays<a href="#microphone-arrays" class="hash-link" aria-label="Direct link to Microphone Arrays" title="Direct link to Microphone Arrays">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="direction-of-arrival-doa">Direction of Arrival (DOA)<a href="#direction-of-arrival-doa" class="hash-link" aria-label="Direct link to Direction of Arrival (DOA)" title="Direct link to Direction of Arrival (DOA)">​</a></h4>
+<ul>
+<li><strong>Time delay estimation</strong>: Determining sound source direction</li>
+<li><strong>Beamforming</strong>: Enhancing signals from specific directions</li>
+<li><strong>Source separation</strong>: Isolating individual sound sources</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="speech-processing">Speech Processing<a href="#speech-processing" class="hash-link" aria-label="Direct link to Speech Processing" title="Direct link to Speech Processing">​</a></h4>
+<ul>
+<li><strong>Automatic speech recognition</strong>: Converting speech to text</li>
+<li><strong>Speaker identification</strong>: Recognizing individual speakers</li>
+<li><strong>Emotion recognition</strong>: Detecting emotional content in speech</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="environmental-sound-analysis">Environmental Sound Analysis<a href="#environmental-sound-analysis" class="hash-link" aria-label="Direct link to Environmental Sound Analysis" title="Direct link to Environmental Sound Analysis">​</a></h3>
+<ul>
+<li><strong>Sound classification</strong>: Identifying environmental sounds</li>
+<li><strong>Acoustic scene analysis</strong>: Understanding environmental context</li>
+<li><strong>Anomaly detection</strong>: Identifying unusual sounds</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="sensor-reliability-and-robustness">Sensor Reliability and Robustness<a href="#sensor-reliability-and-robustness" class="hash-link" aria-label="Direct link to Sensor Reliability and Robustness" title="Direct link to Sensor Reliability and Robustness">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="fault-detection-and-tolerance">Fault Detection and Tolerance<a href="#fault-detection-and-tolerance" class="hash-link" aria-label="Direct link to Fault Detection and Tolerance" title="Direct link to Fault Detection and Tolerance">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="sensor-validation">Sensor Validation<a href="#sensor-validation" class="hash-link" aria-label="Direct link to Sensor Validation" title="Direct link to Sensor Validation">​</a></h4>
+<ul>
+<li><strong>Range checking</strong>: Ensuring sensor values are within expected bounds</li>
+<li><strong>Temporal consistency</strong>: Checking for physically plausible changes</li>
+<li><strong>Cross-validation</strong>: Comparing with other sensors when possible</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="redundancy-strategies">Redundancy Strategies<a href="#redundancy-strategies" class="hash-link" aria-label="Direct link to Redundancy Strategies" title="Direct link to Redundancy Strategies">​</a></h4>
+<ul>
+<li><strong>Hardware redundancy</strong>: Multiple sensors for same measurement</li>
+<li><strong>Analytical redundancy</strong>: Using system models to validate sensor data</li>
+<li><strong>Adaptive fusion</strong>: Dynamically weighting sensors based on reliability</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="environmental-considerations">Environmental Considerations<a href="#environmental-considerations" class="hash-link" aria-label="Direct link to Environmental Considerations" title="Direct link to Environmental Considerations">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="weather-effects">Weather Effects<a href="#weather-effects" class="hash-link" aria-label="Direct link to Weather Effects" title="Direct link to Weather Effects">​</a></h4>
+<ul>
+<li><strong>Rain and snow</strong>: Impact on vision and range sensors</li>
+<li><strong>Temperature</strong>: Effects on sensor performance and calibration</li>
+<li><strong>Dust and debris</strong>: Sensor contamination and cleaning</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="lighting-conditions">Lighting Conditions<a href="#lighting-conditions" class="hash-link" aria-label="Direct link to Lighting Conditions" title="Direct link to Lighting Conditions">​</a></h4>
+<ul>
+<li><strong>Dynamic range</strong>: Handling extreme lighting variations</li>
+<li><strong>Glare and reflections</strong>: Managing bright light sources</li>
+<li><strong>Night vision</strong>: Alternative sensing modalities for low light</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="advanced-sensor-technologies">Advanced Sensor Technologies<a href="#advanced-sensor-technologies" class="hash-link" aria-label="Direct link to Advanced Sensor Technologies" title="Direct link to Advanced Sensor Technologies">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="event-based-sensors">Event-Based Sensors<a href="#event-based-sensors" class="hash-link" aria-label="Direct link to Event-Based Sensors" title="Direct link to Event-Based Sensors">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="event-cameras">Event Cameras<a href="#event-cameras" class="hash-link" aria-label="Direct link to Event Cameras" title="Direct link to Event Cameras">​</a></h4>
+<ul>
+<li><strong>Principle</strong>: Asynchronous pixel-level change detection</li>
+<li><strong>Advantages</strong>: High temporal resolution, low latency, high dynamic range</li>
+<li><strong>Applications</strong>: High-speed motion, low-latency control</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="neuromorphic-sensors">Neuromorphic Sensors<a href="#neuromorphic-sensors" class="hash-link" aria-label="Direct link to Neuromorphic Sensors" title="Direct link to Neuromorphic Sensors">​</a></h4>
+<ul>
+<li><strong>Design</strong>: Inspired by biological sensory systems</li>
+<li><strong>Benefits</strong>: Low power consumption, event-driven processing</li>
+<li><strong>Applications</strong>: Real-time perception and control</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="multimodal-sensors">Multimodal Sensors<a href="#multimodal-sensors" class="hash-link" aria-label="Direct link to Multimodal Sensors" title="Direct link to Multimodal Sensors">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="rgb-d-f-sensors">RGB-D-F Sensors<a href="#rgb-d-f-sensors" class="hash-link" aria-label="Direct link to RGB-D-F Sensors" title="Direct link to RGB-D-F Sensors">​</a></h4>
+<ul>
+<li><strong>Integration</strong>: Combining color, depth, and thermal information</li>
+<li><strong>Applications</strong>: Robust perception in challenging conditions</li>
+<li><strong>Challenges</strong>: Synchronization and calibration of multiple modalities</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="sensor-system-design-considerations">Sensor System Design Considerations<a href="#sensor-system-design-considerations" class="hash-link" aria-label="Direct link to Sensor System Design Considerations" title="Direct link to Sensor System Design Considerations">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="trade-offs-in-design">Trade-offs in Design<a href="#trade-offs-in-design" class="hash-link" aria-label="Direct link to Trade-offs in Design" title="Direct link to Trade-offs in Design">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="performance-vs-cost">Performance vs. Cost<a href="#performance-vs-cost" class="hash-link" aria-label="Direct link to Performance vs. Cost" title="Direct link to Performance vs. Cost">​</a></h4>
+<ul>
+<li><strong>Resolution</strong>: Higher resolution sensors are typically more expensive</li>
+<li><strong>Range</strong>: Long-range sensors often cost more than short-range</li>
+<li><strong>Accuracy</strong>: Precision sensors typically have higher cost</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="power-consumption">Power Consumption<a href="#power-consumption" class="hash-link" aria-label="Direct link to Power Consumption" title="Direct link to Power Consumption">​</a></h4>
+<ul>
+<li><strong>Continuous operation</strong>: Power requirements for always-on sensors</li>
+<li><strong>Processing load</strong>: Computation power needed for sensor data</li>
+<li><strong>Battery life</strong>: Impact on mobile robot operation time</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="size-and-weight">Size and Weight<a href="#size-and-weight" class="hash-link" aria-label="Direct link to Size and Weight" title="Direct link to Size and Weight">​</a></h4>
+<ul>
+<li><strong>Integration constraints</strong>: Physical limitations on sensor size</li>
+<li><strong>Center of mass</strong>: Impact on robot balance and stability</li>
+<li><strong>Aerodynamics</strong>: Considerations for mobile robots</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="integration-with-control-systems">Integration with Control Systems<a href="#integration-with-control-systems" class="hash-link" aria-label="Direct link to Integration with Control Systems" title="Direct link to Integration with Control Systems">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="real-time-requirements">Real-time Requirements<a href="#real-time-requirements" class="hash-link" aria-label="Direct link to Real-time Requirements" title="Direct link to Real-time Requirements">​</a></h4>
+<ul>
+<li><strong>Latency</strong>: Critical timing constraints for control systems</li>
+<li><strong>Throughput</strong>: Data rate requirements for sensor processing</li>
+<li><strong>Predictability</strong>: Deterministic behavior for safety-critical systems</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="feedback-control">Feedback Control<a href="#feedback-control" class="hash-link" aria-label="Direct link to Feedback Control" title="Direct link to Feedback Control">​</a></h4>
+<ul>
+<li><strong>Control loops</strong>: Integration with robot control architecture</li>
+<li><strong>State estimation</strong>: Using sensor data for state estimation</li>
+<li><strong>Adaptive control</strong>: Adjusting control based on sensor feedback</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="emerging-trends">Emerging Trends<a href="#emerging-trends" class="hash-link" aria-label="Direct link to Emerging Trends" title="Direct link to Emerging Trends">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="ai-enhanced-sensing">AI-Enhanced Sensing<a href="#ai-enhanced-sensing" class="hash-link" aria-label="Direct link to AI-Enhanced Sensing" title="Direct link to AI-Enhanced Sensing">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="learning-based-processing">Learning-Based Processing<a href="#learning-based-processing" class="hash-link" aria-label="Direct link to Learning-Based Processing" title="Direct link to Learning-Based Processing">​</a></h4>
+<ul>
+<li><strong>Deep learning</strong>: End-to-end learning of sensor processing</li>
+<li><strong>Neural networks</strong>: Adaptive processing of sensor data</li>
+<li><strong>Self-supervised learning</strong>: Learning from sensor data without labels</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="predictive-sensing">Predictive Sensing<a href="#predictive-sensing" class="hash-link" aria-label="Direct link to Predictive Sensing" title="Direct link to Predictive Sensing">​</a></h4>
+<ul>
+<li><strong>Anticipatory systems</strong>: Predicting sensor readings</li>
+<li><strong>Active perception</strong>: Controlling sensors to gather most informative data</li>
+<li><strong>Adaptive sampling</strong>: Optimizing sensor data collection</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="bio-inspired-sensors">Bio-Inspired Sensors<a href="#bio-inspired-sensors" class="hash-link" aria-label="Direct link to Bio-Inspired Sensors" title="Direct link to Bio-Inspired Sensors">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="biomimetic-design">Biomimetic Design<a href="#biomimetic-design" class="hash-link" aria-label="Direct link to Biomimetic Design" title="Direct link to Biomimetic Design">​</a></h4>
+<ul>
+<li><strong>Insect vision</strong>: Compound eye-inspired sensors</li>
+<li><strong>Whisker systems</strong>: Tactile sensing inspired by mammals</li>
+<li><strong>Electroreception</strong>: Sensing electric fields like fish</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="summary">Summary<a href="#summary" class="hash-link" aria-label="Direct link to Summary" title="Direct link to Summary">​</a></h2>
+<p>Sensor systems are fundamental to Physical AI and humanoid robotics, providing the information necessary for intelligent behavior and interaction with the environment. The design and integration of these systems involves numerous challenges, from sensor fusion and calibration to reliability and environmental considerations. As the field advances, new technologies such as event-based sensors and AI-enhanced processing are opening new possibilities for more capable and robust sensing systems. The continued development of sophisticated sensor systems will be essential for realizing the full potential of Physical AI and humanoid robotics.</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="further-reading">Further Reading<a href="#further-reading" class="hash-link" aria-label="Direct link to Further Reading" title="Direct link to Further Reading">​</a></h2>
+<ul>
+<li>Siciliano, B., &amp; Khatib, O. (2016). Springer Handbook of Robotics</li>
+<li>Thrun, S., Burgard, W., &amp; Fox, D. (2005). Probabilistic Robotics</li>
+<li>Dragone, M., O&#x27;Hare, G. M. P., &amp; Duffy, B. R. (2011). A survey of heterogeneous sensor networks</li>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="theme-doc-footer-edit-meta-row row"><div class="col"><a href="https://github.com/reckonfx/hackathon1-Agenticai-Physical-Ai-Humanoid/tree/main/docs/intro-physical-ai/sensor-systems.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_vwxv"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/docs/intro-physical-ai/humanoid-robotics-landscape"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Humanoid Robotics Landscape</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/docs/ros2-fundamentals/ros2-architecture"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">ROS 2 Architecture</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#introduction-to-sensor-systems" class="table-of-contents__link toc-highlight">Introduction to Sensor Systems</a></li><li><a href="#categories-of-sensors" class="table-of-contents__link toc-highlight">Categories of Sensors</a><ul><li><a href="#proprioceptive-sensors" class="table-of-contents__link toc-highlight">Proprioceptive Sensors</a></li><li><a href="#exteroceptive-sensors" class="table-of-contents__link toc-highlight">Exteroceptive Sensors</a></li></ul></li><li><a href="#sensor-integration-challenges" class="table-of-contents__link toc-highlight">Sensor Integration Challenges</a><ul><li><a href="#sensor-fusion" class="table-of-contents__link toc-highlight">Sensor Fusion</a></li><li><a href="#calibration-and-synchronization" class="table-of-contents__link toc-highlight">Calibration and Synchronization</a></li></ul></li><li><a href="#vision-systems-in-humanoid-robots" class="table-of-contents__link toc-highlight">Vision Systems in Humanoid Robots</a><ul><li><a href="#camera-systems" class="table-of-contents__link toc-highlight">Camera Systems</a></li><li><a href="#visual-processing-pipelines" class="table-of-contents__link toc-highlight">Visual Processing Pipelines</a></li></ul></li><li><a href="#tactile-sensing" class="table-of-contents__link toc-highlight">Tactile Sensing</a><ul><li><a href="#tactile-sensor-technologies" class="table-of-contents__link toc-highlight">Tactile Sensor Technologies</a></li><li><a href="#tactile-perception" class="table-of-contents__link toc-highlight">Tactile Perception</a></li></ul></li><li><a href="#auditory-systems-1" class="table-of-contents__link toc-highlight">Auditory Systems</a><ul><li><a href="#microphone-arrays" class="table-of-contents__link toc-highlight">Microphone Arrays</a></li><li><a href="#environmental-sound-analysis" class="table-of-contents__link toc-highlight">Environmental Sound Analysis</a></li></ul></li><li><a href="#sensor-reliability-and-robustness" class="table-of-contents__link toc-highlight">Sensor Reliability and Robustness</a><ul><li><a href="#fault-detection-and-tolerance" class="table-of-contents__link toc-highlight">Fault Detection and Tolerance</a></li><li><a href="#environmental-considerations" class="table-of-contents__link toc-highlight">Environmental Considerations</a></li></ul></li><li><a href="#advanced-sensor-technologies" class="table-of-contents__link toc-highlight">Advanced Sensor Technologies</a><ul><li><a href="#event-based-sensors" class="table-of-contents__link toc-highlight">Event-Based Sensors</a></li><li><a href="#multimodal-sensors" class="table-of-contents__link toc-highlight">Multimodal Sensors</a></li></ul></li><li><a href="#sensor-system-design-considerations" class="table-of-contents__link toc-highlight">Sensor System Design Considerations</a><ul><li><a href="#trade-offs-in-design" class="table-of-contents__link toc-highlight">Trade-offs in Design</a></li><li><a href="#integration-with-control-systems" class="table-of-contents__link toc-highlight">Integration with Control Systems</a></li></ul></li><li><a href="#emerging-trends" class="table-of-contents__link toc-highlight">Emerging Trends</a><ul><li><a href="#ai-enhanced-sensing" class="table-of-contents__link toc-highlight">AI-Enhanced Sensing</a></li><li><a href="#bio-inspired-sensors" class="table-of-contents__link toc-highlight">Bio-Inspired Sensors</a></li></ul></li><li><a href="#summary" class="table-of-contents__link toc-highlight">Summary</a></li><li><a href="#further-reading" class="table-of-contents__link toc-highlight">Further Reading</a></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Modules</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/docs/intro-physical-ai/what-is-physical-ai">Introduction &amp; Physical AI Foundations</a></li><li class="footer__item"><a class="footer__link-item" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/docs/ros2-fundamentals/ros2-architecture">ROS 2 Fundamentals</a></li><li class="footer__item"><a class="footer__link-item" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/docs/robot-simulation/gazebo-setup">Robot Simulation</a></li><li class="footer__item"><a class="footer__link-item" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/docs/nvidia-isaac/isaac-sim-overview">NVIDIA Isaac Platform</a></li><li class="footer__item"><a class="footer__link-item" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/docs/humanoid-development/humanoid-kinematics">Humanoid Robot Development</a></li><li class="footer__item"><a class="footer__link-item" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/docs/vla-robotics/what-is-vla">VLA Robotics</a></li><li class="footer__item"><a class="footer__link-item" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/docs/capstone-project/requirements">Capstone Project</a></li></ul></div><div class="col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://stackoverflow.com/questions/tagged/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Stack Overflow<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://discordapp.com/invite/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://twitter.com/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Twitter<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div><div class="col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/facebook/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 Physical AI & Humanoid Robotics Textbook. Built with Docusaurus.</div></div></div></footer><div class="chatbot-widget"><button class="chatbot-toggle-button"><span role="img" aria-label="robot">🤖</span> Ask textbook question</button></div></div>
+</body>
+</html>

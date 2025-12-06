@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="ur" dir="rtl" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-vla-robotics/cognitive-planning-with-llms" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.1.0">
+<title data-rh="true">Cognitive Planning with LLMs | Physical AI &amp; Humanoid Robotics Textbook</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://reckonfx.github.io/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://reckonfx.github.io/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://reckonfx.github.io/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/docs/vla-robotics/cognitive-planning-with-llms"><meta data-rh="true" property="og:locale" content="ur"><meta data-rh="true" property="og:locale:alternate" content="en"><meta data-rh="true" name="docusaurus_locale" content="ur"><meta data-rh="true" name="docsearch:language" content="ur"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Cognitive Planning with LLMs | Physical AI &amp; Humanoid Robotics Textbook"><meta data-rh="true" name="description" content="Introduction to LLM-Based Cognitive Planning"><meta data-rh="true" property="og:description" content="Introduction to LLM-Based Cognitive Planning"><link data-rh="true" rel="icon" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://reckonfx.github.io/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/docs/vla-robotics/cognitive-planning-with-llms"><link data-rh="true" rel="alternate" href="https://reckonfx.github.io/hackathon1-Agenticai-Physical-Ai-Humanoid/docs/vla-robotics/cognitive-planning-with-llms" hreflang="en"><link data-rh="true" rel="alternate" href="https://reckonfx.github.io/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/docs/vla-robotics/cognitive-planning-with-llms" hreflang="ur"><link data-rh="true" rel="alternate" href="https://reckonfx.github.io/hackathon1-Agenticai-Physical-Ai-Humanoid/docs/vla-robotics/cognitive-planning-with-llms" hreflang="x-default"><link rel="stylesheet" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/assets/css/styles.b1d3fbd4.css">
+<script src="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/assets/js/runtime~main.b2fc2af6.js" defer="defer"></script>
+<script src="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/assets/js/main.2e77cea3.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/"><div class="navbar__logo"><img src="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/img/logo.svg" alt="Physical AI Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/img/logo.svg" alt="Physical AI Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Physical AI &amp; Humanoid Robotics</b></a><a class="navbar__item navbar__link" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/docs/intro-physical-ai/what-is-physical-ai">Textbook</a></div><div class="navbar__items navbar__items--right"><a href="https://github.com/reckonfx/hackathon1-Agenticai-Physical-Ai-Humanoid" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><main class="docMainContainer_TBSr docMainContainerEnhanced_lQrH"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><h1>Cognitive Planning with Large Language Models in Robotics</h1>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="introduction-to-llm-based-cognitive-planning">Introduction to LLM-Based Cognitive Planning<a href="#introduction-to-llm-based-cognitive-planning" class="hash-link" aria-label="Direct link to Introduction to LLM-Based Cognitive Planning" title="Direct link to Introduction to LLM-Based Cognitive Planning">​</a></h2>
+<p>Cognitive planning with Large Language Models (LLMs) represents a revolutionary approach to robotic task planning and execution. By leveraging the vast knowledge and reasoning capabilities of LLMs, robots can perform complex cognitive planning that goes beyond traditional symbolic planning approaches. This integration enables robots to understand high-level goals expressed in natural language, decompose them into executable actions, and adapt to changing situations using the LLM&#x27;s world knowledge and reasoning abilities.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="fundamentals-of-cognitive-planning">Fundamentals of Cognitive Planning<a href="#fundamentals-of-cognitive-planning" class="hash-link" aria-label="Direct link to Fundamentals of Cognitive Planning" title="Direct link to Fundamentals of Cognitive Planning">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="traditional-vs-llm-based-planning">Traditional vs. LLM-Based Planning<a href="#traditional-vs-llm-based-planning" class="hash-link" aria-label="Direct link to Traditional vs. LLM-Based Planning" title="Direct link to Traditional vs. LLM-Based Planning">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="classical-planning-approaches">Classical Planning Approaches<a href="#classical-planning-approaches" class="hash-link" aria-label="Direct link to Classical Planning Approaches" title="Direct link to Classical Planning Approaches">​</a></h4>
+<ul>
+<li><strong>Symbolic planning</strong>: Using formal logic and symbolic representations</li>
+<li><strong>STRIPS planning</strong>: State-space planning with action operators</li>
+<li><strong>Hierarchical planning</strong>: Breaking down complex tasks into subtasks</li>
+<li><strong>Motion planning</strong>: Path planning for physical movement</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="llm-enhanced-planning">LLM-Enhanced Planning<a href="#llm-enhanced-planning" class="hash-link" aria-label="Direct link to LLM-Enhanced Planning" title="Direct link to LLM-Enhanced Planning">​</a></h4>
+<ul>
+<li><strong>Natural language goals</strong>: Accepting goals expressed in natural language</li>
+<li><strong>Commonsense reasoning</strong>: Leveraging world knowledge for planning</li>
+<li><strong>Analogical reasoning</strong>: Applying knowledge from similar situations</li>
+<li><strong>Adaptive planning</strong>: Adjusting plans based on new information</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="cognitive-architecture-components">Cognitive Architecture Components<a href="#cognitive-architecture-components" class="hash-link" aria-label="Direct link to Cognitive Architecture Components" title="Direct link to Cognitive Architecture Components">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="planning-module">Planning Module<a href="#planning-module" class="hash-link" aria-label="Direct link to Planning Module" title="Direct link to Planning Module">​</a></h4>
+<ul>
+<li><strong>Goal parsing</strong>: Interpreting high-level goals from natural language</li>
+<li><strong>Task decomposition</strong>: Breaking down goals into manageable subtasks</li>
+<li><strong>Plan generation</strong>: Creating sequences of actions to achieve goals</li>
+<li><strong>Plan validation</strong>: Ensuring generated plans are feasible and safe</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="knowledge-integration">Knowledge Integration<a href="#knowledge-integration" class="hash-link" aria-label="Direct link to Knowledge Integration" title="Direct link to Knowledge Integration">​</a></h4>
+<ul>
+<li><strong>World knowledge</strong>: Accessing general world knowledge for planning</li>
+<li><strong>Robot capabilities</strong>: Understanding robot-specific capabilities and constraints</li>
+<li><strong>Environment modeling</strong>: Maintaining and updating environment models</li>
+<li><strong>Context awareness</strong>: Incorporating situational context into planning</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="large-language-model-integration">Large Language Model Integration<a href="#large-language-model-integration" class="hash-link" aria-label="Direct link to Large Language Model Integration" title="Direct link to Large Language Model Integration">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="llm-capabilities-for-planning">LLM Capabilities for Planning<a href="#llm-capabilities-for-planning" class="hash-link" aria-label="Direct link to LLM Capabilities for Planning" title="Direct link to LLM Capabilities for Planning">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="reasoning-and-inference">Reasoning and Inference<a href="#reasoning-and-inference" class="hash-link" aria-label="Direct link to Reasoning and Inference" title="Direct link to Reasoning and Inference">​</a></h4>
+<ul>
+<li><strong>Logical reasoning</strong>: Applying logical rules to derive plans</li>
+<li><strong>Spatial reasoning</strong>: Understanding spatial relationships and navigation</li>
+<li><strong>Temporal reasoning</strong>: Understanding sequences and timing of actions</li>
+<li><strong>Causal reasoning</strong>: Understanding cause-and-effect relationships</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="knowledge-retrieval">Knowledge Retrieval<a href="#knowledge-retrieval" class="hash-link" aria-label="Direct link to Knowledge Retrieval" title="Direct link to Knowledge Retrieval">​</a></h4>
+<ul>
+<li><strong>Commonsense knowledge</strong>: Accessing general world knowledge</li>
+<li><strong>Procedural knowledge</strong>: Understanding how to perform tasks</li>
+<li><strong>Object affordances</strong>: Understanding what objects can be used for</li>
+<li><strong>Social conventions</strong>: Understanding social and cultural norms</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="llm-integration-architectures">LLM Integration Architectures<a href="#llm-integration-architectures" class="hash-link" aria-label="Direct link to LLM Integration Architectures" title="Direct link to LLM Integration Architectures">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="direct-integration">Direct Integration<a href="#direct-integration" class="hash-link" aria-label="Direct link to Direct Integration" title="Direct link to Direct Integration">​</a></h4>
+<ul>
+<li><strong>Prompt engineering</strong>: Crafting prompts to elicit planning behavior</li>
+<li><strong>Chain-of-thought reasoning</strong>: Guiding LLM through reasoning steps</li>
+<li><strong>Few-shot learning</strong>: Providing examples to guide planning</li>
+<li><strong>Zero-shot planning</strong>: Planning without task-specific examples</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="hybrid-approaches">Hybrid Approaches<a href="#hybrid-approaches" class="hash-link" aria-label="Direct link to Hybrid Approaches" title="Direct link to Hybrid Approaches">​</a></h4>
+<ul>
+<li><strong>LLM + classical planners</strong>: Combining LLM reasoning with traditional planners</li>
+<li><strong>LLM + reinforcement learning</strong>: Combining reasoning with learning</li>
+<li><strong>LLM + symbolic reasoning</strong>: Integrating with symbolic reasoning systems</li>
+<li><strong>LLM + perception</strong>: Connecting with perception systems for grounding</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="planning-frameworks">Planning Frameworks<a href="#planning-frameworks" class="hash-link" aria-label="Direct link to Planning Frameworks" title="Direct link to Planning Frameworks">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="hierarchical-task-networks-htn">Hierarchical Task Networks (HTN)<a href="#hierarchical-task-networks-htn" class="hash-link" aria-label="Direct link to Hierarchical Task Networks (HTN)" title="Direct link to Hierarchical Task Networks (HTN)">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="llm-enhanced-htn">LLM-Enhanced HTN<a href="#llm-enhanced-htn" class="hash-link" aria-label="Direct link to LLM-Enhanced HTN" title="Direct link to LLM-Enhanced HTN">​</a></h4>
+<ul>
+<li><strong>Task decomposition</strong>: Using LLM to decompose high-level tasks</li>
+<li><strong>Method selection</strong>: Choosing appropriate methods for task execution</li>
+<li><strong>Constraint handling</strong>: Managing constraints during planning</li>
+<li><strong>Plan refinement</strong>: Iteratively refining plans based on feedback</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="knowledge-guided-decomposition">Knowledge-Guided Decomposition<a href="#knowledge-guided-decomposition" class="hash-link" aria-label="Direct link to Knowledge-Guided Decomposition" title="Direct link to Knowledge-Guided Decomposition">​</a></h4>
+<ul>
+<li><strong>Commonsense decomposition</strong>: Using world knowledge for task breakdown</li>
+<li><strong>Context-aware decomposition</strong>: Adapting decomposition to context</li>
+<li><strong>Capability-aware decomposition</strong>: Considering robot capabilities</li>
+<li><strong>Resource-aware decomposition</strong>: Considering available resources</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="behavior-trees">Behavior Trees<a href="#behavior-trees" class="hash-link" aria-label="Direct link to Behavior Trees" title="Direct link to Behavior Trees">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="llm-enhanced-behavior-trees">LLM-Enhanced Behavior Trees<a href="#llm-enhanced-behavior-trees" class="hash-link" aria-label="Direct link to LLM-Enhanced Behavior Trees" title="Direct link to LLM-Enhanced Behavior Trees">​</a></h4>
+<ul>
+<li><strong>Dynamic tree generation</strong>: Generating behavior trees based on goals</li>
+<li><strong>Adaptive execution</strong>: Adapting tree execution based on feedback</li>
+<li><strong>Learning from execution</strong>: Improving trees through experience</li>
+<li><strong>Context switching</strong>: Switching between different behavior trees</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="planning-with-uncertainty">Planning with Uncertainty<a href="#planning-with-uncertainty" class="hash-link" aria-label="Direct link to Planning with Uncertainty" title="Direct link to Planning with Uncertainty">​</a></h4>
+<ul>
+<li><strong>Probabilistic reasoning</strong>: Handling uncertainty in planning</li>
+<li><strong>Risk assessment</strong>: Evaluating risks in plan execution</li>
+<li><strong>Contingency planning</strong>: Planning for potential failures</li>
+<li><strong>Recovery strategies</strong>: Planning for error recovery</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="grounding-llm-plans-in-reality">Grounding LLM Plans in Reality<a href="#grounding-llm-plans-in-reality" class="hash-link" aria-label="Direct link to Grounding LLM Plans in Reality" title="Direct link to Grounding LLM Plans in Reality">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="physical-grounding">Physical Grounding<a href="#physical-grounding" class="hash-link" aria-label="Direct link to Physical Grounding" title="Direct link to Physical Grounding">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="action-grounding">Action Grounding<a href="#action-grounding" class="hash-link" aria-label="Direct link to Action Grounding" title="Direct link to Action Grounding">​</a></h4>
+<ul>
+<li><strong>Symbolic to physical</strong>: Translating symbolic actions to physical actions</li>
+<li><strong>Parameter instantiation</strong>: Filling in specific parameters for actions</li>
+<li><strong>Constraint satisfaction</strong>: Ensuring physical constraints are met</li>
+<li><strong>Feasibility checking</strong>: Verifying actions are physically possible</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="object-grounding">Object Grounding<a href="#object-grounding" class="hash-link" aria-label="Direct link to Object Grounding" title="Direct link to Object Grounding">​</a></h4>
+<ul>
+<li><strong>Object identification</strong>: Identifying objects mentioned in plans</li>
+<li><strong>Attribute mapping</strong>: Mapping abstract attributes to physical properties</li>
+<li><strong>Spatial grounding</strong>: Grounding spatial references in physical space</li>
+<li><strong>Affordance mapping</strong>: Connecting language to physical affordances</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="perception-integration">Perception Integration<a href="#perception-integration" class="hash-link" aria-label="Direct link to Perception Integration" title="Direct link to Perception Integration">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="visual-grounding">Visual Grounding<a href="#visual-grounding" class="hash-link" aria-label="Direct link to Visual Grounding" title="Direct link to Visual Grounding">​</a></h4>
+<ul>
+<li><strong>Object detection</strong>: Detecting objects referenced in plans</li>
+<li><strong>Scene understanding</strong>: Understanding current scene state</li>
+<li><strong>Change detection</strong>: Detecting changes that affect plan execution</li>
+<li><strong>Visual verification</strong>: Verifying plan execution visually</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="multimodal-grounding">Multimodal Grounding<a href="#multimodal-grounding" class="hash-link" aria-label="Direct link to Multimodal Grounding" title="Direct link to Multimodal Grounding">​</a></h4>
+<ul>
+<li><strong>Audio integration</strong>: Using audio cues for grounding</li>
+<li><strong>Tactile feedback</strong>: Using tactile information for verification</li>
+<li><strong>Proprioceptive feedback</strong>: Using robot self-sensing for grounding</li>
+<li><strong>Cross-modal integration</strong>: Combining multiple modalities</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="interactive-planning-and-refinement">Interactive Planning and Refinement<a href="#interactive-planning-and-refinement" class="hash-link" aria-label="Direct link to Interactive Planning and Refinement" title="Direct link to Interactive Planning and Refinement">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="human-in-the-loop-planning">Human-in-the-Loop Planning<a href="#human-in-the-loop-planning" class="hash-link" aria-label="Direct link to Human-in-the-Loop Planning" title="Direct link to Human-in-the-Loop Planning">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="plan-explanation">Plan Explanation<a href="#plan-explanation" class="hash-link" aria-label="Direct link to Plan Explanation" title="Direct link to Plan Explanation">​</a></h4>
+<ul>
+<li><strong>Natural language explanations</strong>: Explaining plans in natural language</li>
+<li><strong>Step-by-step justification</strong>: Justifying each planning decision</li>
+<li><strong>Alternative explanations</strong>: Providing alternative plan options</li>
+<li><strong>Uncertainty communication</strong>: Communicating planning uncertainties</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="plan-correction">Plan Correction<a href="#plan-correction" class="hash-link" aria-label="Direct link to Plan Correction" title="Direct link to Plan Correction">​</a></h4>
+<ul>
+<li><strong>Error identification</strong>: Identifying problems in proposed plans</li>
+<li><strong>Suggestion incorporation</strong>: Incorporating human suggestions</li>
+<li><strong>Plan revision</strong>: Revising plans based on feedback</li>
+<li><strong>Learning from corrections</strong>: Learning from human corrections</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="collaborative-planning">Collaborative Planning<a href="#collaborative-planning" class="hash-link" aria-label="Direct link to Collaborative Planning" title="Direct link to Collaborative Planning">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="shared-planning">Shared Planning<a href="#shared-planning" class="hash-link" aria-label="Direct link to Shared Planning" title="Direct link to Shared Planning">​</a></h4>
+<ul>
+<li><strong>Joint goal setting</strong>: Collaboratively setting goals</li>
+<li><strong>Role assignment</strong>: Assigning roles in plan execution</li>
+<li><strong>Coordination protocols</strong>: Coordinating actions between agents</li>
+<li><strong>Communication protocols</strong>: Communicating plan status</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="plan-adaptation">Plan Adaptation<a href="#plan-adaptation" class="hash-link" aria-label="Direct link to Plan Adaptation" title="Direct link to Plan Adaptation">​</a></h4>
+<ul>
+<li><strong>Real-time adaptation</strong>: Adapting plans during execution</li>
+<li><strong>Context changes</strong>: Handling changes in context</li>
+<li><strong>New information</strong>: Incorporating new information into plans</li>
+<li><strong>Goal updates</strong>: Handling changes in goals</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="applications-in-robotics">Applications in Robotics<a href="#applications-in-robotics" class="hash-link" aria-label="Direct link to Applications in Robotics" title="Direct link to Applications in Robotics">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="domestic-robotics">Domestic Robotics<a href="#domestic-robotics" class="hash-link" aria-label="Direct link to Domestic Robotics" title="Direct link to Domestic Robotics">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="household-task-planning">Household Task Planning<a href="#household-task-planning" class="hash-link" aria-label="Direct link to Household Task Planning" title="Direct link to Household Task Planning">​</a></h4>
+<ul>
+<li><strong>Daily routines</strong>: Planning daily household activities</li>
+<li><strong>Chore coordination</strong>: Coordinating multiple household tasks</li>
+<li><strong>Resource management</strong>: Managing household resources</li>
+<li><strong>Schedule optimization</strong>: Optimizing daily schedules</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="assistive-robotics">Assistive Robotics<a href="#assistive-robotics" class="hash-link" aria-label="Direct link to Assistive Robotics" title="Direct link to Assistive Robotics">​</a></h4>
+<ul>
+<li><strong>Personal care</strong>: Planning personal care assistance</li>
+<li><strong>Medication management</strong>: Planning medication schedules</li>
+<li><strong>Safety monitoring</strong>: Planning safety-related actions</li>
+<li><strong>Social interaction</strong>: Planning social interaction activities</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="industrial-robotics">Industrial Robotics<a href="#industrial-robotics" class="hash-link" aria-label="Direct link to Industrial Robotics" title="Direct link to Industrial Robotics">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="manufacturing-planning">Manufacturing Planning<a href="#manufacturing-planning" class="hash-link" aria-label="Direct link to Manufacturing Planning" title="Direct link to Manufacturing Planning">​</a></h4>
+<ul>
+<li><strong>Assembly planning</strong>: Planning complex assembly tasks</li>
+<li><strong>Quality control</strong>: Planning inspection and quality control</li>
+<li><strong>Maintenance planning</strong>: Planning maintenance activities</li>
+<li><strong>Resource allocation</strong>: Planning resource allocation</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="logistics-and-warehousing">Logistics and Warehousing<a href="#logistics-and-warehousing" class="hash-link" aria-label="Direct link to Logistics and Warehousing" title="Direct link to Logistics and Warehousing">​</a></h4>
+<ul>
+<li><strong>Picking and packing</strong>: Planning picking and packing operations</li>
+<li><strong>Inventory management</strong>: Planning inventory-related tasks</li>
+<li><strong>Route optimization</strong>: Planning efficient routes</li>
+<li><strong>Fleet coordination</strong>: Coordinating multiple robots</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="service-robotics">Service Robotics<a href="#service-robotics" class="hash-link" aria-label="Direct link to Service Robotics" title="Direct link to Service Robotics">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="customer-service">Customer Service<a href="#customer-service" class="hash-link" aria-label="Direct link to Customer Service" title="Direct link to Customer Service">​</a></h4>
+<ul>
+<li><strong>Service planning</strong>: Planning customer service interactions</li>
+<li><strong>Task scheduling</strong>: Scheduling service tasks</li>
+<li><strong>Resource allocation</strong>: Allocating service resources</li>
+<li><strong>Personalization</strong>: Personalizing service based on customer needs</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="healthcare-robotics">Healthcare Robotics<a href="#healthcare-robotics" class="hash-link" aria-label="Direct link to Healthcare Robotics" title="Direct link to Healthcare Robotics">​</a></h4>
+<ul>
+<li><strong>Patient care planning</strong>: Planning patient care activities</li>
+<li><strong>Medication delivery</strong>: Planning medication delivery tasks</li>
+<li><strong>Monitoring tasks</strong>: Planning patient monitoring</li>
+<li><strong>Emergency response</strong>: Planning emergency response actions</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="technical-implementation">Technical Implementation<a href="#technical-implementation" class="hash-link" aria-label="Direct link to Technical Implementation" title="Direct link to Technical Implementation">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="prompt-engineering-for-planning">Prompt Engineering for Planning<a href="#prompt-engineering-for-planning" class="hash-link" aria-label="Direct link to Prompt Engineering for Planning" title="Direct link to Prompt Engineering for Planning">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="planning-prompts">Planning Prompts<a href="#planning-prompts" class="hash-link" aria-label="Direct link to Planning Prompts" title="Direct link to Planning Prompts">​</a></h4>
+<ul>
+<li><strong>Goal specification</strong>: Clearly specifying goals for LLM</li>
+<li><strong>Context provision</strong>: Providing relevant context</li>
+<li><strong>Constraint specification</strong>: Specifying constraints and limitations</li>
+<li><strong>Output format</strong>: Specifying desired output format</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="chain-of-thought-prompts">Chain-of-Thought Prompts<a href="#chain-of-thought-prompts" class="hash-link" aria-label="Direct link to Chain-of-Thought Prompts" title="Direct link to Chain-of-Thought Prompts">​</a></h4>
+<ul>
+<li><strong>Step-by-step reasoning</strong>: Guiding LLM through reasoning steps</li>
+<li><strong>Intermediate verification</strong>: Verifying intermediate steps</li>
+<li><strong>Backtracking support</strong>: Supporting backtracking when needed</li>
+<li><strong>Alternative exploration</strong>: Exploring alternative approaches</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="integration-architectures">Integration Architectures<a href="#integration-architectures" class="hash-link" aria-label="Direct link to Integration Architectures" title="Direct link to Integration Architectures">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="planning-pipeline">Planning Pipeline<a href="#planning-pipeline" class="hash-link" aria-label="Direct link to Planning Pipeline" title="Direct link to Planning Pipeline">​</a></h4>
+<ul>
+<li><strong>Input processing</strong>: Processing natural language goals</li>
+<li><strong>Knowledge retrieval</strong>: Retrieving relevant knowledge</li>
+<li><strong>Plan generation</strong>: Generating plans using LLM</li>
+<li><strong>Plan execution</strong>: Executing generated plans</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="feedback-loops">Feedback Loops<a href="#feedback-loops" class="hash-link" aria-label="Direct link to Feedback Loops" title="Direct link to Feedback Loops">​</a></h4>
+<ul>
+<li><strong>Execution monitoring</strong>: Monitoring plan execution</li>
+<li><strong>Failure detection</strong>: Detecting plan failures</li>
+<li><strong>Plan revision</strong>: Revising plans based on feedback</li>
+<li><strong>Learning integration</strong>: Learning from execution outcomes</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="evaluation-and-assessment">Evaluation and Assessment<a href="#evaluation-and-assessment" class="hash-link" aria-label="Direct link to Evaluation and Assessment" title="Direct link to Evaluation and Assessment">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="planning-quality-metrics">Planning Quality Metrics<a href="#planning-quality-metrics" class="hash-link" aria-label="Direct link to Planning Quality Metrics" title="Direct link to Planning Quality Metrics">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="plan-quality">Plan Quality<a href="#plan-quality" class="hash-link" aria-label="Direct link to Plan Quality" title="Direct link to Plan Quality">​</a></h4>
+<ul>
+<li><strong>Completeness</strong>: Whether plans cover all required steps</li>
+<li><strong>Correctness</strong>: Whether plans are logically sound</li>
+<li><strong>Efficiency</strong>: Computational efficiency of planning</li>
+<li><strong>Optimality</strong>: How optimal the generated plans are</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="execution-quality">Execution Quality<a href="#execution-quality" class="hash-link" aria-label="Direct link to Execution Quality" title="Direct link to Execution Quality">​</a></h4>
+<ul>
+<li><strong>Success rate</strong>: Percentage of plans successfully executed</li>
+<li><strong>Execution time</strong>: Time to execute plans</li>
+<li><strong>Resource usage</strong>: Resources consumed during execution</li>
+<li><strong>Adaptability</strong>: Ability to adapt plans during execution</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="human-evaluation">Human Evaluation<a href="#human-evaluation" class="hash-link" aria-label="Direct link to Human Evaluation" title="Direct link to Human Evaluation">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="usability-studies">Usability Studies<a href="#usability-studies" class="hash-link" aria-label="Direct link to Usability Studies" title="Direct link to Usability Studies">​</a></h4>
+<ul>
+<li><strong>Naturalness</strong>: How natural the interaction feels</li>
+<li><strong>Intuitiveness</strong>: How intuitive the planning system is</li>
+<li><strong>Effectiveness</strong>: How effectively users can achieve goals</li>
+<li><strong>Satisfaction</strong>: User satisfaction with the system</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="comparative-studies">Comparative Studies<a href="#comparative-studies" class="hash-link" aria-label="Direct link to Comparative Studies" title="Direct link to Comparative Studies">​</a></h4>
+<ul>
+<li><strong>Traditional vs. LLM planning</strong>: Comparing with traditional approaches</li>
+<li><strong>Different LLMs</strong>: Comparing different LLM approaches</li>
+<li><strong>Hybrid approaches</strong>: Evaluating hybrid planning approaches</li>
+<li><strong>Human performance</strong>: Comparing with human planning</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="challenges-and-limitations">Challenges and Limitations<a href="#challenges-and-limitations" class="hash-link" aria-label="Direct link to Challenges and Limitations" title="Direct link to Challenges and Limitations">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="technical-challenges">Technical Challenges<a href="#technical-challenges" class="hash-link" aria-label="Direct link to Technical Challenges" title="Direct link to Technical Challenges">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="computational-complexity">Computational Complexity<a href="#computational-complexity" class="hash-link" aria-label="Direct link to Computational Complexity" title="Direct link to Computational Complexity">​</a></h4>
+<ul>
+<li><strong>Real-time requirements</strong>: Meeting real-time planning requirements</li>
+<li><strong>Scalability</strong>: Scaling to complex, long-horizon tasks</li>
+<li><strong>Memory usage</strong>: Managing memory requirements for LLMs</li>
+<li><strong>Latency</strong>: Minimizing planning latency</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="grounding-challenges">Grounding Challenges<a href="#grounding-challenges" class="hash-link" aria-label="Direct link to Grounding Challenges" title="Direct link to Grounding Challenges">​</a></h4>
+<ul>
+<li><strong>Reality gap</strong>: Gap between LLM knowledge and physical reality</li>
+<li><strong>Embodiment</strong>: Connecting abstract knowledge to physical actions</li>
+<li><strong>Perception accuracy</strong>: Dependence on perception system accuracy</li>
+<li><strong>Uncertainty handling</strong>: Handling uncertainty in grounding</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="safety-and-reliability">Safety and Reliability<a href="#safety-and-reliability" class="hash-link" aria-label="Direct link to Safety and Reliability" title="Direct link to Safety and Reliability">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="safety-considerations">Safety Considerations<a href="#safety-considerations" class="hash-link" aria-label="Direct link to Safety Considerations" title="Direct link to Safety Considerations">​</a></h4>
+<ul>
+<li><strong>Plan safety</strong>: Ensuring generated plans are safe</li>
+<li><strong>Fail-safe mechanisms</strong>: Implementing fail-safe behaviors</li>
+<li><strong>Validation procedures</strong>: Validating plans before execution</li>
+<li><strong>Monitoring systems</strong>: Monitoring plan execution for safety</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="reliability-issues">Reliability Issues<a href="#reliability-issues" class="hash-link" aria-label="Direct link to Reliability Issues" title="Direct link to Reliability Issues">​</a></h4>
+<ul>
+<li><strong>Consistency</strong>: Ensuring consistent planning behavior</li>
+<li><strong>Robustness</strong>: Robustness to input variations</li>
+<li><strong>Error handling</strong>: Handling planning errors gracefully</li>
+<li><strong>Fallback mechanisms</strong>: Providing fallback planning approaches</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="advanced-techniques">Advanced Techniques<a href="#advanced-techniques" class="hash-link" aria-label="Direct link to Advanced Techniques" title="Direct link to Advanced Techniques">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="multi-modal-planning">Multi-Modal Planning<a href="#multi-modal-planning" class="hash-link" aria-label="Direct link to Multi-Modal Planning" title="Direct link to Multi-Modal Planning">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="vision-language-integration">Vision-Language Integration<a href="#vision-language-integration" class="hash-link" aria-label="Direct link to Vision-Language Integration" title="Direct link to Vision-Language Integration">​</a></h4>
+<ul>
+<li><strong>Visual planning</strong>: Using visual information in planning</li>
+<li><strong>Image understanding</strong>: Understanding images for planning</li>
+<li><strong>Visual feedback</strong>: Using visual feedback to refine plans</li>
+<li><strong>Cross-modal reasoning</strong>: Reasoning across vision and language</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="multi-sensory-integration">Multi-Sensory Integration<a href="#multi-sensory-integration" class="hash-link" aria-label="Direct link to Multi-Sensory Integration" title="Direct link to Multi-Sensory Integration">​</a></h4>
+<ul>
+<li><strong>Audio planning</strong>: Using audio information in planning</li>
+<li><strong>Tactile reasoning</strong>: Incorporating tactile information</li>
+<li><strong>Proprioceptive feedback</strong>: Using robot self-sensing</li>
+<li><strong>Sensor fusion</strong>: Fusing multiple sensor modalities</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="learning-enhanced-planning">Learning-Enhanced Planning<a href="#learning-enhanced-planning" class="hash-link" aria-label="Direct link to Learning-Enhanced Planning" title="Direct link to Learning-Enhanced Planning">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="plan-learning">Plan Learning<a href="#plan-learning" class="hash-link" aria-label="Direct link to Plan Learning" title="Direct link to Plan Learning">​</a></h4>
+<ul>
+<li><strong>Learning from demonstration</strong>: Learning plans from demonstrations</li>
+<li><strong>Learning from interaction</strong>: Learning through interaction</li>
+<li><strong>Learning from failure</strong>: Learning from planning failures</li>
+<li><strong>Transfer learning</strong>: Transferring planning knowledge</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="adaptive-planning">Adaptive Planning<a href="#adaptive-planning" class="hash-link" aria-label="Direct link to Adaptive Planning" title="Direct link to Adaptive Planning">​</a></h4>
+<ul>
+<li><strong>Online learning</strong>: Learning during plan execution</li>
+<li><strong>Experience-based adaptation</strong>: Adapting based on experience</li>
+<li><strong>Context adaptation</strong>: Adapting to different contexts</li>
+<li><strong>User adaptation</strong>: Adapting to different users</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="future-directions">Future Directions<a href="#future-directions" class="hash-link" aria-label="Direct link to Future Directions" title="Direct link to Future Directions">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="research-frontiers">Research Frontiers<a href="#research-frontiers" class="hash-link" aria-label="Direct link to Research Frontiers" title="Direct link to Research Frontiers">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="advanced-reasoning">Advanced Reasoning<a href="#advanced-reasoning" class="hash-link" aria-label="Direct link to Advanced Reasoning" title="Direct link to Advanced Reasoning">​</a></h4>
+<ul>
+<li><strong>Causal reasoning</strong>: More sophisticated causal reasoning</li>
+<li><strong>Counterfactual reasoning</strong>: Reasoning about alternative scenarios</li>
+<li><strong>Meta-reasoning</strong>: Reasoning about reasoning processes</li>
+<li><strong>Temporal reasoning</strong>: Advanced temporal reasoning capabilities</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="human-ai-collaboration">Human-AI Collaboration<a href="#human-ai-collaboration" class="hash-link" aria-label="Direct link to Human-AI Collaboration" title="Direct link to Human-AI Collaboration">​</a></h4>
+<ul>
+<li><strong>Shared autonomy</strong>: Better human-AI collaboration</li>
+<li><strong>Explainable planning</strong>: More explainable planning systems</li>
+<li><strong>Trust calibration</strong>: Calibrating human trust in planning systems</li>
+<li><strong>Collaborative learning</strong>: Learning together with humans</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="technical-advances">Technical Advances<a href="#technical-advances" class="hash-link" aria-label="Direct link to Technical Advances" title="Direct link to Technical Advances">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="efficiency-improvements">Efficiency Improvements<a href="#efficiency-improvements" class="hash-link" aria-label="Direct link to Efficiency Improvements" title="Direct link to Efficiency Improvements">​</a></h4>
+<ul>
+<li><strong>Model compression</strong>: Compressing LLMs for planning</li>
+<li><strong>Efficient prompting</strong>: More efficient prompting techniques</li>
+<li><strong>Caching mechanisms</strong>: Caching planning results</li>
+<li><strong>Parallel processing</strong>: Parallelizing planning processes</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="integration-advances">Integration Advances<a href="#integration-advances" class="hash-link" aria-label="Direct link to Integration Advances" title="Direct link to Integration Advances">​</a></h4>
+<ul>
+<li><strong>Seamless integration</strong>: Better integration with robotic systems</li>
+<li><strong>Real-time capabilities</strong>: Improved real-time planning</li>
+<li><strong>Multi-robot planning</strong>: Planning for multiple robots</li>
+<li><strong>Distributed planning</strong>: Distributed planning systems</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="summary">Summary<a href="#summary" class="hash-link" aria-label="Direct link to Summary" title="Direct link to Summary">​</a></h2>
+<p>Cognitive planning with Large Language Models represents a significant advancement in robotic planning capabilities, enabling robots to perform complex planning tasks using natural language and leveraging vast world knowledge. While challenges remain in terms of grounding, safety, and efficiency, the integration of LLMs with robotic planning systems shows great promise for creating more capable and intuitive robotic systems. As research continues to advance, LLM-based cognitive planning will likely become an essential component of advanced robotic systems, enabling more natural and effective human-robot collaboration.</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="further-reading">Further Reading<a href="#further-reading" class="hash-link" aria-label="Direct link to Further Reading" title="Direct link to Further Reading">​</a></h2>
+<ul>
+<li>Chen, X., et al. (2023). Language Models as Zero-Shot Planners: Extracting Actionable Knowledge for Embodied Agents</li>
+<li>Huang, W., et al. (2022). Language Models as ReActors: Generating Reasoning Chains as Executable Plans</li>
+<li>Kwon, J., et al. (2023). Grounding Large Language Models in Interactive Environments</li>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="theme-doc-footer-edit-meta-row row"><div class="col"><a href="https://github.com/reckonfx/hackathon1-Agenticai-Physical-Ai-Humanoid/tree/main/docs/vla-robotics/cognitive-planning-with-llms.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_vwxv"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#introduction-to-llm-based-cognitive-planning" class="table-of-contents__link toc-highlight">Introduction to LLM-Based Cognitive Planning</a></li><li><a href="#fundamentals-of-cognitive-planning" class="table-of-contents__link toc-highlight">Fundamentals of Cognitive Planning</a><ul><li><a href="#traditional-vs-llm-based-planning" class="table-of-contents__link toc-highlight">Traditional vs. LLM-Based Planning</a></li><li><a href="#cognitive-architecture-components" class="table-of-contents__link toc-highlight">Cognitive Architecture Components</a></li></ul></li><li><a href="#large-language-model-integration" class="table-of-contents__link toc-highlight">Large Language Model Integration</a><ul><li><a href="#llm-capabilities-for-planning" class="table-of-contents__link toc-highlight">LLM Capabilities for Planning</a></li><li><a href="#llm-integration-architectures" class="table-of-contents__link toc-highlight">LLM Integration Architectures</a></li></ul></li><li><a href="#planning-frameworks" class="table-of-contents__link toc-highlight">Planning Frameworks</a><ul><li><a href="#hierarchical-task-networks-htn" class="table-of-contents__link toc-highlight">Hierarchical Task Networks (HTN)</a></li><li><a href="#behavior-trees" class="table-of-contents__link toc-highlight">Behavior Trees</a></li></ul></li><li><a href="#grounding-llm-plans-in-reality" class="table-of-contents__link toc-highlight">Grounding LLM Plans in Reality</a><ul><li><a href="#physical-grounding" class="table-of-contents__link toc-highlight">Physical Grounding</a></li><li><a href="#perception-integration" class="table-of-contents__link toc-highlight">Perception Integration</a></li></ul></li><li><a href="#interactive-planning-and-refinement" class="table-of-contents__link toc-highlight">Interactive Planning and Refinement</a><ul><li><a href="#human-in-the-loop-planning" class="table-of-contents__link toc-highlight">Human-in-the-Loop Planning</a></li><li><a href="#collaborative-planning" class="table-of-contents__link toc-highlight">Collaborative Planning</a></li></ul></li><li><a href="#applications-in-robotics" class="table-of-contents__link toc-highlight">Applications in Robotics</a><ul><li><a href="#domestic-robotics" class="table-of-contents__link toc-highlight">Domestic Robotics</a></li><li><a href="#industrial-robotics" class="table-of-contents__link toc-highlight">Industrial Robotics</a></li><li><a href="#service-robotics" class="table-of-contents__link toc-highlight">Service Robotics</a></li></ul></li><li><a href="#technical-implementation" class="table-of-contents__link toc-highlight">Technical Implementation</a><ul><li><a href="#prompt-engineering-for-planning" class="table-of-contents__link toc-highlight">Prompt Engineering for Planning</a></li><li><a href="#integration-architectures" class="table-of-contents__link toc-highlight">Integration Architectures</a></li></ul></li><li><a href="#evaluation-and-assessment" class="table-of-contents__link toc-highlight">Evaluation and Assessment</a><ul><li><a href="#planning-quality-metrics" class="table-of-contents__link toc-highlight">Planning Quality Metrics</a></li><li><a href="#human-evaluation" class="table-of-contents__link toc-highlight">Human Evaluation</a></li></ul></li><li><a href="#challenges-and-limitations" class="table-of-contents__link toc-highlight">Challenges and Limitations</a><ul><li><a href="#technical-challenges" class="table-of-contents__link toc-highlight">Technical Challenges</a></li><li><a href="#safety-and-reliability" class="table-of-contents__link toc-highlight">Safety and Reliability</a></li></ul></li><li><a href="#advanced-techniques" class="table-of-contents__link toc-highlight">Advanced Techniques</a><ul><li><a href="#multi-modal-planning" class="table-of-contents__link toc-highlight">Multi-Modal Planning</a></li><li><a href="#learning-enhanced-planning" class="table-of-contents__link toc-highlight">Learning-Enhanced Planning</a></li></ul></li><li><a href="#future-directions" class="table-of-contents__link toc-highlight">Future Directions</a><ul><li><a href="#research-frontiers" class="table-of-contents__link toc-highlight">Research Frontiers</a></li><li><a href="#technical-advances" class="table-of-contents__link toc-highlight">Technical Advances</a></li></ul></li><li><a href="#summary" class="table-of-contents__link toc-highlight">Summary</a></li><li><a href="#further-reading" class="table-of-contents__link toc-highlight">Further Reading</a></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Modules</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/docs/intro-physical-ai/what-is-physical-ai">Introduction &amp; Physical AI Foundations</a></li><li class="footer__item"><a class="footer__link-item" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/docs/ros2-fundamentals/ros2-architecture">ROS 2 Fundamentals</a></li><li class="footer__item"><a class="footer__link-item" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/docs/robot-simulation/gazebo-setup">Robot Simulation</a></li><li class="footer__item"><a class="footer__link-item" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/docs/nvidia-isaac/isaac-sim-overview">NVIDIA Isaac Platform</a></li><li class="footer__item"><a class="footer__link-item" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/docs/humanoid-development/humanoid-kinematics">Humanoid Robot Development</a></li><li class="footer__item"><a class="footer__link-item" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/docs/vla-robotics/what-is-vla">VLA Robotics</a></li><li class="footer__item"><a class="footer__link-item" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/docs/capstone-project/requirements">Capstone Project</a></li></ul></div><div class="col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://stackoverflow.com/questions/tagged/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Stack Overflow<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://discordapp.com/invite/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://twitter.com/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Twitter<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div><div class="col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/facebook/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 Physical AI & Humanoid Robotics Textbook. Built with Docusaurus.</div></div></div></footer><div class="chatbot-widget"><button class="chatbot-toggle-button"><span role="img" aria-label="robot">🤖</span> Ask textbook question</button></div></div>
+</body>
+</html>

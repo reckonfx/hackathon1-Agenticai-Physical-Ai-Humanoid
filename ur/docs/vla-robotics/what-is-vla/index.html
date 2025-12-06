@@ -1,0 +1,268 @@
+<!doctype html>
+<html lang="ur" dir="rtl" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-vla-robotics/what-is-vla" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.1.0">
+<title data-rh="true">What is VLA? | Physical AI &amp; Humanoid Robotics Textbook</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://reckonfx.github.io/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://reckonfx.github.io/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://reckonfx.github.io/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/docs/vla-robotics/what-is-vla"><meta data-rh="true" property="og:locale" content="ur"><meta data-rh="true" property="og:locale:alternate" content="en"><meta data-rh="true" name="docusaurus_locale" content="ur"><meta data-rh="true" name="docsearch:language" content="ur"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="What is VLA? | Physical AI &amp; Humanoid Robotics Textbook"><meta data-rh="true" name="description" content="Introduction to Vision-Language-Action Models"><meta data-rh="true" property="og:description" content="Introduction to Vision-Language-Action Models"><link data-rh="true" rel="icon" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://reckonfx.github.io/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/docs/vla-robotics/what-is-vla"><link data-rh="true" rel="alternate" href="https://reckonfx.github.io/hackathon1-Agenticai-Physical-Ai-Humanoid/docs/vla-robotics/what-is-vla" hreflang="en"><link data-rh="true" rel="alternate" href="https://reckonfx.github.io/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/docs/vla-robotics/what-is-vla" hreflang="ur"><link data-rh="true" rel="alternate" href="https://reckonfx.github.io/hackathon1-Agenticai-Physical-Ai-Humanoid/docs/vla-robotics/what-is-vla" hreflang="x-default"><link rel="stylesheet" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/assets/css/styles.b1d3fbd4.css">
+<script src="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/assets/js/runtime~main.b2fc2af6.js" defer="defer"></script>
+<script src="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/assets/js/main.2e77cea3.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/"><div class="navbar__logo"><img src="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/img/logo.svg" alt="Physical AI Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/img/logo.svg" alt="Physical AI Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Physical AI &amp; Humanoid Robotics</b></a><a aria-current="page" class="navbar__item navbar__link navbar__link--active" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/docs/intro-physical-ai/what-is-physical-ai">Textbook</a></div><div class="navbar__items navbar__items--right"><a href="https://github.com/reckonfx/hackathon1-Agenticai-Physical-Ai-Humanoid" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><aside class="theme-doc-sidebar-container docSidebarContainer_YfHR"><div class="sidebarViewport_aRkj"><div class="sidebar_njMd"><nav aria-label="Docs sidebar" class="menu thin-scrollbar menu_SIkG"><ul class="theme-doc-sidebar-menu menu__list"><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/docs/intro-physical-ai/what-is-physical-ai">Introduction &amp; Physical AI Foundations</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/docs/ros2-fundamentals/ros2-architecture">ROS 2 Fundamentals</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/docs/robot-simulation/gazebo-setup">Robot Simulation</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/docs/nvidia-isaac/isaac-sim-overview">NVIDIA Isaac Platform</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/docs/humanoid-development/humanoid-kinematics">Humanoid Robot Development</a></div></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret menu__link--active" aria-expanded="true" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/docs/vla-robotics/what-is-vla">VLA Robotics</a></div><ul style="display:block;overflow:visible;height:auto" class="menu__list"><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link menu__link--active" aria-current="page" tabindex="0" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/docs/vla-robotics/what-is-vla">What is VLA?</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/docs/vla-robotics/voice-to-action">Voice-to-Action (Whisper)</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/docs/vla-robotics/cognitive-planning-llms">cognitive-planning-llms</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/docs/vla-robotics/multi-modal-perception">Multi-modal Perception</a></li><li class="theme-doc-sidebar-item-link theme-doc-sidebar-item-link-level-2 menu__list-item"><a class="menu__link" tabindex="0" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/docs/vla-robotics/nl-ros2-action-mapping">nl-ros2-action-mapping</a></li></ul></li><li class="theme-doc-sidebar-item-category theme-doc-sidebar-item-category-level-1 menu__list-item menu__list-item--collapsed"><div class="menu__list-item-collapsible"><a class="menu__link menu__link--sublist menu__link--sublist-caret" aria-expanded="false" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/docs/capstone-project/requirements">Capstone Project</a></div></li></ul></nav></div></div></aside><main class="docMainContainer_TBSr"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><nav class="theme-doc-breadcrumbs breadcrumbsContainer_Z_bl" aria-label="Breadcrumbs"><ul class="breadcrumbs" itemscope="" itemtype="https://schema.org/BreadcrumbList"><li class="breadcrumbs__item"><span class="breadcrumbs__link">VLA Robotics</span><meta itemprop="position" content="1"></li><li itemscope="" itemprop="itemListElement" itemtype="https://schema.org/ListItem" class="breadcrumbs__item breadcrumbs__item--active"><span class="breadcrumbs__link" itemprop="name">What is VLA?</span><meta itemprop="position" content="2"></li></ul></nav><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><h1>What is VLA? (Vision-Language-Action)</h1>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="introduction-to-vision-language-action-models">Introduction to Vision-Language-Action Models<a href="#introduction-to-vision-language-action-models" class="hash-link" aria-label="Direct link to Introduction to Vision-Language-Action Models" title="Direct link to Introduction to Vision-Language-Action Models">​</a></h2>
+<p>Vision-Language-Action (VLA) models represent a paradigm shift in robotics, integrating visual perception, natural language understanding, and robotic action in a unified framework. Unlike traditional robotics approaches that treat perception, language, and action as separate modules, VLA models learn joint representations that enable robots to understand natural language commands and execute corresponding physical actions based on visual input. This integration enables more natural and intuitive human-robot interaction.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="core-concepts-of-vla">Core Concepts of VLA<a href="#core-concepts-of-vla" class="hash-link" aria-label="Direct link to Core Concepts of VLA" title="Direct link to Core Concepts of VLA">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="vision-language-integration">Vision-Language Integration<a href="#vision-language-integration" class="hash-link" aria-label="Direct link to Vision-Language Integration" title="Direct link to Vision-Language Integration">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="multimodal-understanding">Multimodal Understanding<a href="#multimodal-understanding" class="hash-link" aria-label="Direct link to Multimodal Understanding" title="Direct link to Multimodal Understanding">​</a></h4>
+<ul>
+<li><strong>Joint embeddings</strong>: Creating unified representations of visual and linguistic information</li>
+<li><strong>Cross-modal attention</strong>: Allowing visual and language modalities to influence each other</li>
+<li><strong>Semantic grounding</strong>: Connecting language concepts to visual observations</li>
+<li><strong>Context awareness</strong>: Understanding commands in visual context</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="technical-foundation">Technical Foundation<a href="#technical-foundation" class="hash-link" aria-label="Direct link to Technical Foundation" title="Direct link to Technical Foundation">​</a></h4>
+<ul>
+<li><strong>Transformer architectures</strong>: Using attention mechanisms for multimodal fusion</li>
+<li><strong>Pre-trained models</strong>: Leveraging large-scale pre-trained vision and language models</li>
+<li><strong>Fine-tuning strategies</strong>: Adapting general models to robotic manipulation tasks</li>
+<li><strong>Embodied learning</strong>: Learning from physical interaction with environment</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="action-generation">Action Generation<a href="#action-generation" class="hash-link" aria-label="Direct link to Action Generation" title="Direct link to Action Generation">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="policy-learning">Policy Learning<a href="#policy-learning" class="hash-link" aria-label="Direct link to Policy Learning" title="Direct link to Policy Learning">​</a></h4>
+<ul>
+<li><strong>Behavior cloning</strong>: Learning from human demonstrations</li>
+<li><strong>Reinforcement learning</strong>: Learning through environmental feedback</li>
+<li><strong>Imitation learning</strong>: Imitating expert behavior</li>
+<li><strong>Goal-conditioned policies</strong>: Learning policies conditioned on natural language goals</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="action-space-representation">Action Space Representation<a href="#action-space-representation" class="hash-link" aria-label="Direct link to Action Space Representation" title="Direct link to Action Space Representation">​</a></h4>
+<ul>
+<li><strong>End-effector control</strong>: Controlling robot gripper position and orientation</li>
+<li><strong>Joint space control</strong>: Direct control of robot joint angles</li>
+<li><strong>Task space control</strong>: Controlling robot behavior in task-relevant coordinates</li>
+<li><strong>Discrete action spaces</strong>: Representing actions as discrete choices</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="vla-model-architectures">VLA Model Architectures<a href="#vla-model-architectures" class="hash-link" aria-label="Direct link to VLA Model Architectures" title="Direct link to VLA Model Architectures">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="unified-transformer-models">Unified Transformer Models<a href="#unified-transformer-models" class="hash-link" aria-label="Direct link to Unified Transformer Models" title="Direct link to Unified Transformer Models">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="architecture-components">Architecture Components<a href="#architecture-components" class="hash-link" aria-label="Direct link to Architecture Components" title="Direct link to Architecture Components">​</a></h4>
+<ul>
+<li><strong>Vision encoder</strong>: Processing visual input (images, video)</li>
+<li><strong>Language encoder</strong>: Processing natural language commands</li>
+<li><strong>Fusion mechanism</strong>: Combining vision and language representations</li>
+<li><strong>Action decoder</strong>: Generating robot actions from fused representations</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="training-approaches">Training Approaches<a href="#training-approaches" class="hash-link" aria-label="Direct link to Training Approaches" title="Direct link to Training Approaches">​</a></h4>
+<ul>
+<li><strong>Multi-task learning</strong>: Training on multiple vision-language-action tasks</li>
+<li><strong>Sequential modeling</strong>: Modeling temporal sequences of observations and actions</li>
+<li><strong>Self-supervised learning</strong>: Learning from unlabeled robotic data</li>
+<li><strong>Contrastive learning</strong>: Learning representations that align vision, language, and action</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="foundation-models">Foundation Models<a href="#foundation-models" class="hash-link" aria-label="Direct link to Foundation Models" title="Direct link to Foundation Models">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="large-scale-pre-training">Large-Scale Pre-training<a href="#large-scale-pre-training" class="hash-link" aria-label="Direct link to Large-Scale Pre-training" title="Direct link to Large-Scale Pre-training">​</a></h4>
+<ul>
+<li><strong>Internet-scale data</strong>: Training on large-scale internet data</li>
+<li><strong>Robotics datasets</strong>: Incorporating robotic manipulation datasets</li>
+<li><strong>Cross-domain transfer</strong>: Transferring knowledge across domains</li>
+<li><strong>Emergent capabilities</strong>: Developing unexpected capabilities through scale</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="model-scaling">Model Scaling<a href="#model-scaling" class="hash-link" aria-label="Direct link to Model Scaling" title="Direct link to Model Scaling">​</a></h4>
+<ul>
+<li><strong>Parameter scaling</strong>: Increasing model parameters for better performance</li>
+<li><strong>Data scaling</strong>: Using more diverse training data</li>
+<li><strong>Compute scaling</strong>: Leveraging more computational resources</li>
+<li><strong>Efficiency considerations</strong>: Balancing performance and efficiency</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="applications-of-vla-in-robotics">Applications of VLA in Robotics<a href="#applications-of-vla-in-robotics" class="hash-link" aria-label="Direct link to Applications of VLA in Robotics" title="Direct link to Applications of VLA in Robotics">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="manipulation-tasks">Manipulation Tasks<a href="#manipulation-tasks" class="hash-link" aria-label="Direct link to Manipulation Tasks" title="Direct link to Manipulation Tasks">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="object-manipulation">Object Manipulation<a href="#object-manipulation" class="hash-link" aria-label="Direct link to Object Manipulation" title="Direct link to Object Manipulation">​</a></h4>
+<ul>
+<li><strong>Object recognition</strong>: Identifying and localizing objects in environment</li>
+<li><strong>Grasp planning</strong>: Planning appropriate grasps based on object properties</li>
+<li><strong>Manipulation planning</strong>: Planning sequences of actions for complex tasks</li>
+<li><strong>Tool use</strong>: Using objects as tools to achieve goals</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="task-execution">Task Execution<a href="#task-execution" class="hash-link" aria-label="Direct link to Task Execution" title="Direct link to Task Execution">​</a></h4>
+<ul>
+<li><strong>Instruction following</strong>: Following natural language instructions</li>
+<li><strong>Multi-step tasks</strong>: Executing complex tasks requiring multiple steps</li>
+<li><strong>Error recovery</strong>: Handling and recovering from execution failures</li>
+<li><strong>Adaptive execution</strong>: Adapting to changing environmental conditions</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="navigation-and-mobility">Navigation and Mobility<a href="#navigation-and-mobility" class="hash-link" aria-label="Direct link to Navigation and Mobility" title="Direct link to Navigation and Mobility">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="spatial-understanding">Spatial Understanding<a href="#spatial-understanding" class="hash-link" aria-label="Direct link to Spatial Understanding" title="Direct link to Spatial Understanding">​</a></h4>
+<ul>
+<li><strong>Scene understanding</strong>: Understanding spatial layout of environment</li>
+<li><strong>Path planning</strong>: Planning paths to navigate to specified locations</li>
+<li><strong>Obstacle avoidance</strong>: Avoiding obstacles during navigation</li>
+<li><strong>Dynamic environments</strong>: Adapting to changing environmental conditions</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="command-following">Command Following<a href="#command-following" class="hash-link" aria-label="Direct link to Command Following" title="Direct link to Command Following">​</a></h4>
+<ul>
+<li><strong>Waypoint navigation</strong>: Navigating to specified locations</li>
+<li><strong>Room navigation</strong>: Navigating to rooms or areas based on descriptions</li>
+<li><strong>Follow-me</strong>: Following humans based on natural language commands</li>
+<li><strong>Search tasks</strong>: Searching for objects or locations based on descriptions</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="technical-implementation">Technical Implementation<a href="#technical-implementation" class="hash-link" aria-label="Direct link to Technical Implementation" title="Direct link to Technical Implementation">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="data-requirements">Data Requirements<a href="#data-requirements" class="hash-link" aria-label="Direct link to Data Requirements" title="Direct link to Data Requirements">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="training-data">Training Data<a href="#training-data" class="hash-link" aria-label="Direct link to Training Data" title="Direct link to Training Data">​</a></h4>
+<ul>
+<li><strong>Multimodal datasets</strong>: Data containing vision, language, and action components</li>
+<li><strong>Diverse tasks</strong>: Data covering diverse robotic tasks and environments</li>
+<li><strong>Human demonstrations</strong>: Examples of human performing tasks</li>
+<li><strong>Language annotations</strong>: Natural language descriptions of tasks and actions</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="data-collection">Data Collection<a href="#data-collection" class="hash-link" aria-label="Direct link to Data Collection" title="Direct link to Data Collection">​</a></h4>
+<ul>
+<li><strong>Human teleoperation</strong>: Collecting data through human teleoperation</li>
+<li><strong>Automated data collection</strong>: Automated methods for collecting training data</li>
+<li><strong>Simulation to reality</strong>: Transferring from simulated to real environments</li>
+<li><strong>Data augmentation</strong>: Techniques for increasing data diversity</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="model-training">Model Training<a href="#model-training" class="hash-link" aria-label="Direct link to Model Training" title="Direct link to Model Training">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="pre-training-strategies">Pre-training Strategies<a href="#pre-training-strategies" class="hash-link" aria-label="Direct link to Pre-training Strategies" title="Direct link to Pre-training Strategies">​</a></h4>
+<ul>
+<li><strong>Vision-language pre-training</strong>: Pre-training on vision-language datasets</li>
+<li><strong>Robotics pre-training</strong>: Pre-training on robotic manipulation data</li>
+<li><strong>Cross-modal alignment</strong>: Aligning representations across modalities</li>
+<li><strong>Transfer learning</strong>: Transferring knowledge from pre-trained models</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="fine-tuning-approaches">Fine-tuning Approaches<a href="#fine-tuning-approaches" class="hash-link" aria-label="Direct link to Fine-tuning Approaches" title="Direct link to Fine-tuning Approaches">​</a></h4>
+<ul>
+<li><strong>Task-specific fine-tuning</strong>: Fine-tuning for specific robotic tasks</li>
+<li><strong>Domain adaptation</strong>: Adapting to new environments or robots</li>
+<li><strong>Online learning</strong>: Learning during deployment and interaction</li>
+<li><strong>Few-shot learning</strong>: Learning from limited examples</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="challenges-and-limitations">Challenges and Limitations<a href="#challenges-and-limitations" class="hash-link" aria-label="Direct link to Challenges and Limitations" title="Direct link to Challenges and Limitations">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="technical-challenges">Technical Challenges<a href="#technical-challenges" class="hash-link" aria-label="Direct link to Technical Challenges" title="Direct link to Technical Challenges">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="scalability">Scalability<a href="#scalability" class="hash-link" aria-label="Direct link to Scalability" title="Direct link to Scalability">​</a></h4>
+<ul>
+<li><strong>Computational requirements</strong>: High computational demands of VLA models</li>
+<li><strong>Real-time performance</strong>: Meeting real-time requirements for robotic control</li>
+<li><strong>Memory efficiency</strong>: Managing memory usage for deployment</li>
+<li><strong>Energy consumption</strong>: Managing energy usage for mobile robots</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="generalization">Generalization<a href="#generalization" class="hash-link" aria-label="Direct link to Generalization" title="Direct link to Generalization">​</a></h4>
+<ul>
+<li><strong>Cross-task generalization</strong>: Generalizing across different tasks</li>
+<li><strong>Cross-environment generalization</strong>: Generalizing across different environments</li>
+<li><strong>Cross-robot generalization</strong>: Generalizing across different robotic platforms</li>
+<li><strong>Long-horizon tasks</strong>: Handling tasks requiring many sequential actions</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="safety-and-robustness">Safety and Robustness<a href="#safety-and-robustness" class="hash-link" aria-label="Direct link to Safety and Robustness" title="Direct link to Safety and Robustness">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="safety-considerations">Safety Considerations<a href="#safety-considerations" class="hash-link" aria-label="Direct link to Safety Considerations" title="Direct link to Safety Considerations">​</a></h4>
+<ul>
+<li><strong>Safe exploration</strong>: Ensuring safe learning and exploration</li>
+<li><strong>Failure detection</strong>: Detecting when the model is uncertain or wrong</li>
+<li><strong>Safe fallback</strong>: Implementing safe fallback behaviors</li>
+<li><strong>Physical safety</strong>: Ensuring safe physical interaction with environment</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="robustness">Robustness<a href="#robustness" class="hash-link" aria-label="Direct link to Robustness" title="Direct link to Robustness">​</a></h4>
+<ul>
+<li><strong>Adversarial examples</strong>: Handling adversarial inputs</li>
+<li><strong>Distribution shift</strong>: Handling differences between training and deployment</li>
+<li><strong>Sensor noise</strong>: Robustness to sensor noise and failures</li>
+<li><strong>Environmental changes</strong>: Adapting to environmental changes</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="recent-advances-and-research">Recent Advances and Research<a href="#recent-advances-and-research" class="hash-link" aria-label="Direct link to Recent Advances and Research" title="Direct link to Recent Advances and Research">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="state-of-the-art-models">State-of-the-Art Models<a href="#state-of-the-art-models" class="hash-link" aria-label="Direct link to State-of-the-Art Models" title="Direct link to State-of-the-Art Models">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="rt-1-robotics-transformer-1">RT-1 (Robotics Transformer 1)<a href="#rt-1-robotics-transformer-1" class="hash-link" aria-label="Direct link to RT-1 (Robotics Transformer 1)" title="Direct link to RT-1 (Robotics Transformer 1)">​</a></h4>
+<ul>
+<li><strong>Architecture</strong>: Transformer-based model for robotic manipulation</li>
+<li><strong>Capabilities</strong>: Generalization to new tasks and environments</li>
+<li><strong>Training</strong>: Large-scale training on diverse robotic data</li>
+<li><strong>Performance</strong>: State-of-the-art results on various manipulation tasks</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="frt-few-shot-robot-transformers">FRT (Few-Shot Robot Transformers)<a href="#frt-few-shot-robot-transformers" class="hash-link" aria-label="Direct link to FRT (Few-Shot Robot Transformers)" title="Direct link to FRT (Few-Shot Robot Transformers)">​</a></h4>
+<ul>
+<li><strong>Few-shot learning</strong>: Learning new tasks from few demonstrations</li>
+<li><strong>Generalization</strong>: Strong generalization to new tasks</li>
+<li><strong>Efficiency</strong>: More efficient than previous approaches</li>
+<li><strong>Flexibility</strong>: Adapting to new environments quickly</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="rt-2-robotics-transformer-2">RT-2 (Robotics Transformer 2)<a href="#rt-2-robotics-transformer-2" class="hash-link" aria-label="Direct link to RT-2 (Robotics Transformer 2)" title="Direct link to RT-2 (Robotics Transformer 2)">​</a></h3>
+<ul>
+<li><strong>Vision-language foundation</strong>: Built on large vision-language models</li>
+<li><strong>Reasoning capabilities</strong>: Improved reasoning and planning</li>
+<li><strong>Generalization</strong>: Better generalization to new tasks</li>
+<li><strong>Scalability</strong>: Leveraging large-scale pre-training</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="embodied-gpt-and-related-models">Embodied GPT and Related Models<a href="#embodied-gpt-and-related-models" class="hash-link" aria-label="Direct link to Embodied GPT and Related Models" title="Direct link to Embodied GPT and Related Models">​</a></h3>
+<ul>
+<li><strong>Large language models</strong>: Integration with large language models</li>
+<li><strong>Reasoning</strong>: Complex reasoning for robotic tasks</li>
+<li><strong>Planning</strong>: Long-horizon planning capabilities</li>
+<li><strong>Human interaction</strong>: Natural language interaction capabilities</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="integration-with-humanoid-robotics">Integration with Humanoid Robotics<a href="#integration-with-humanoid-robotics" class="hash-link" aria-label="Direct link to Integration with Humanoid Robotics" title="Direct link to Integration with Humanoid Robotics">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="embodied-intelligence">Embodied Intelligence<a href="#embodied-intelligence" class="hash-link" aria-label="Direct link to Embodied Intelligence" title="Direct link to Embodied Intelligence">​</a></h3>
+<ul>
+<li><strong>Physical embodiment</strong>: Leveraging physical form for intelligence</li>
+<li><strong>Sensorimotor integration</strong>: Integrating perception and action</li>
+<li><strong>Real-world learning</strong>: Learning through physical interaction</li>
+<li><strong>Adaptive behavior</strong>: Adapting behavior based on physical constraints</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="human-robot-interaction">Human-Robot Interaction<a href="#human-robot-interaction" class="hash-link" aria-label="Direct link to Human-Robot Interaction" title="Direct link to Human-Robot Interaction">​</a></h3>
+<ul>
+<li><strong>Natural communication</strong>: Natural language interaction with humans</li>
+<li><strong>Social behavior</strong>: Socially appropriate robotic behavior</li>
+<li><strong>Collaboration</strong>: Collaborative task execution with humans</li>
+<li><strong>Learning from humans</strong>: Learning from human demonstrations and feedback</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="multimodal-integration">Multimodal Integration<a href="#multimodal-integration" class="hash-link" aria-label="Direct link to Multimodal Integration" title="Direct link to Multimodal Integration">​</a></h3>
+<ul>
+<li><strong>Sensor fusion</strong>: Integrating multiple sensory modalities</li>
+<li><strong>Action coordination</strong>: Coordinating multiple action modalities</li>
+<li><strong>Context awareness</strong>: Understanding context through multiple modalities</li>
+<li><strong>Adaptive interaction</strong>: Adapting interaction based on multimodal input</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="evaluation-and-benchmarks">Evaluation and Benchmarks<a href="#evaluation-and-benchmarks" class="hash-link" aria-label="Direct link to Evaluation and Benchmarks" title="Direct link to Evaluation and Benchmarks">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="standard-benchmarks">Standard Benchmarks<a href="#standard-benchmarks" class="hash-link" aria-label="Direct link to Standard Benchmarks" title="Direct link to Standard Benchmarks">​</a></h3>
+<ul>
+<li><strong>CALVIN</strong>: Benchmark for language-conditioned manipulation</li>
+<li><strong>Robotics benchmarking</strong>: Standardized evaluation protocols</li>
+<li><strong>Generalization evaluation</strong>: Evaluating cross-task generalization</li>
+<li><strong>Real-world evaluation</strong>: Evaluating in real-world settings</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="performance-metrics">Performance Metrics<a href="#performance-metrics" class="hash-link" aria-label="Direct link to Performance Metrics" title="Direct link to Performance Metrics">​</a></h3>
+<ul>
+<li><strong>Success rate</strong>: Percentage of tasks completed successfully</li>
+<li><strong>Efficiency</strong>: Time and resources required for task completion</li>
+<li><strong>Generalization</strong>: Performance on unseen tasks and environments</li>
+<li><strong>Human satisfaction</strong>: Human evaluation of robot performance</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="future-directions">Future Directions<a href="#future-directions" class="hash-link" aria-label="Direct link to Future Directions" title="Direct link to Future Directions">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="research-frontiers">Research Frontiers<a href="#research-frontiers" class="hash-link" aria-label="Direct link to Research Frontiers" title="Direct link to Research Frontiers">​</a></h3>
+<ul>
+<li><strong>Multimodal pre-training</strong>: Larger and more diverse pre-training</li>
+<li><strong>Reasoning capabilities</strong>: Improved reasoning and planning</li>
+<li><strong>Human-in-the-loop</strong>: Better integration of human feedback</li>
+<li><strong>Embodied learning</strong>: Learning through physical interaction</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="applications">Applications<a href="#applications" class="hash-link" aria-label="Direct link to Applications" title="Direct link to Applications">​</a></h3>
+<ul>
+<li><strong>Domestic robotics</strong>: Home robots for daily assistance</li>
+<li><strong>Healthcare robotics</strong>: Robots for healthcare and elderly care</li>
+<li><strong>Industrial automation</strong>: Collaborative robots in manufacturing</li>
+<li><strong>Education</strong>: Educational robots for learning and development</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="technical-challenges-1">Technical Challenges<a href="#technical-challenges-1" class="hash-link" aria-label="Direct link to Technical Challenges" title="Direct link to Technical Challenges">​</a></h3>
+<ul>
+<li><strong>Efficiency</strong>: Making VLA models more computationally efficient</li>
+<li><strong>Safety</strong>: Ensuring safe deployment of VLA systems</li>
+<li><strong>Interpretability</strong>: Making VLA models more interpretable</li>
+<li><strong>Scalability</strong>: Scaling to more complex tasks and environments</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="summary">Summary<a href="#summary" class="hash-link" aria-label="Direct link to Summary" title="Direct link to Summary">​</a></h2>
+<p>Vision-Language-Action models represent a significant advancement in robotics, enabling robots to understand natural language commands and execute corresponding physical actions based on visual input. These models integrate perception, language, and action in unified frameworks, allowing for more natural and intuitive human-robot interaction. While significant challenges remain in terms of scalability, safety, and robustness, VLA models show great promise for enabling more capable and general-purpose robotic systems. As research continues to advance, VLA models will likely play an increasingly important role in the development of intelligent humanoid robots capable of natural interaction with humans and environments.</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="further-reading">Further Reading<a href="#further-reading" class="hash-link" aria-label="Direct link to Further Reading" title="Direct link to Further Reading">​</a></h2>
+<ul>
+<li>Brohan, A., et al. (2022). RT-1: Robotics Transformer for Real-World Control at Scale</li>
+<li>Chen, C., et al. (2023). RT-2: Vision-Language-Action Models for General Robot Control</li>
+<li>Ahn, M., et al. (2022). Do As I Can, Not As I Say: Grounding Language in Robotic Affordances</li>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="theme-doc-footer-edit-meta-row row"><div class="col"><a href="https://github.com/reckonfx/hackathon1-Agenticai-Physical-Ai-Humanoid/tree/main/docs/vla-robotics/what-is-vla.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_vwxv"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"><a class="pagination-nav__link pagination-nav__link--prev" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/docs/humanoid-development/human-robot-interaction"><div class="pagination-nav__sublabel">Previous</div><div class="pagination-nav__label">Human-Robot Interaction</div></a><a class="pagination-nav__link pagination-nav__link--next" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/docs/vla-robotics/voice-to-action"><div class="pagination-nav__sublabel">Next</div><div class="pagination-nav__label">Voice-to-Action (Whisper)</div></a></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#introduction-to-vision-language-action-models" class="table-of-contents__link toc-highlight">Introduction to Vision-Language-Action Models</a></li><li><a href="#core-concepts-of-vla" class="table-of-contents__link toc-highlight">Core Concepts of VLA</a><ul><li><a href="#vision-language-integration" class="table-of-contents__link toc-highlight">Vision-Language Integration</a></li><li><a href="#action-generation" class="table-of-contents__link toc-highlight">Action Generation</a></li></ul></li><li><a href="#vla-model-architectures" class="table-of-contents__link toc-highlight">VLA Model Architectures</a><ul><li><a href="#unified-transformer-models" class="table-of-contents__link toc-highlight">Unified Transformer Models</a></li><li><a href="#foundation-models" class="table-of-contents__link toc-highlight">Foundation Models</a></li></ul></li><li><a href="#applications-of-vla-in-robotics" class="table-of-contents__link toc-highlight">Applications of VLA in Robotics</a><ul><li><a href="#manipulation-tasks" class="table-of-contents__link toc-highlight">Manipulation Tasks</a></li><li><a href="#navigation-and-mobility" class="table-of-contents__link toc-highlight">Navigation and Mobility</a></li></ul></li><li><a href="#technical-implementation" class="table-of-contents__link toc-highlight">Technical Implementation</a><ul><li><a href="#data-requirements" class="table-of-contents__link toc-highlight">Data Requirements</a></li><li><a href="#model-training" class="table-of-contents__link toc-highlight">Model Training</a></li></ul></li><li><a href="#challenges-and-limitations" class="table-of-contents__link toc-highlight">Challenges and Limitations</a><ul><li><a href="#technical-challenges" class="table-of-contents__link toc-highlight">Technical Challenges</a></li><li><a href="#safety-and-robustness" class="table-of-contents__link toc-highlight">Safety and Robustness</a></li></ul></li><li><a href="#recent-advances-and-research" class="table-of-contents__link toc-highlight">Recent Advances and Research</a><ul><li><a href="#state-of-the-art-models" class="table-of-contents__link toc-highlight">State-of-the-Art Models</a></li><li><a href="#rt-2-robotics-transformer-2" class="table-of-contents__link toc-highlight">RT-2 (Robotics Transformer 2)</a></li><li><a href="#embodied-gpt-and-related-models" class="table-of-contents__link toc-highlight">Embodied GPT and Related Models</a></li></ul></li><li><a href="#integration-with-humanoid-robotics" class="table-of-contents__link toc-highlight">Integration with Humanoid Robotics</a><ul><li><a href="#embodied-intelligence" class="table-of-contents__link toc-highlight">Embodied Intelligence</a></li><li><a href="#human-robot-interaction" class="table-of-contents__link toc-highlight">Human-Robot Interaction</a></li><li><a href="#multimodal-integration" class="table-of-contents__link toc-highlight">Multimodal Integration</a></li></ul></li><li><a href="#evaluation-and-benchmarks" class="table-of-contents__link toc-highlight">Evaluation and Benchmarks</a><ul><li><a href="#standard-benchmarks" class="table-of-contents__link toc-highlight">Standard Benchmarks</a></li><li><a href="#performance-metrics" class="table-of-contents__link toc-highlight">Performance Metrics</a></li></ul></li><li><a href="#future-directions" class="table-of-contents__link toc-highlight">Future Directions</a><ul><li><a href="#research-frontiers" class="table-of-contents__link toc-highlight">Research Frontiers</a></li><li><a href="#applications" class="table-of-contents__link toc-highlight">Applications</a></li><li><a href="#technical-challenges-1" class="table-of-contents__link toc-highlight">Technical Challenges</a></li></ul></li><li><a href="#summary" class="table-of-contents__link toc-highlight">Summary</a></li><li><a href="#further-reading" class="table-of-contents__link toc-highlight">Further Reading</a></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Modules</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/docs/intro-physical-ai/what-is-physical-ai">Introduction &amp; Physical AI Foundations</a></li><li class="footer__item"><a class="footer__link-item" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/docs/ros2-fundamentals/ros2-architecture">ROS 2 Fundamentals</a></li><li class="footer__item"><a class="footer__link-item" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/docs/robot-simulation/gazebo-setup">Robot Simulation</a></li><li class="footer__item"><a class="footer__link-item" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/docs/nvidia-isaac/isaac-sim-overview">NVIDIA Isaac Platform</a></li><li class="footer__item"><a class="footer__link-item" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/docs/humanoid-development/humanoid-kinematics">Humanoid Robot Development</a></li><li class="footer__item"><a class="footer__link-item" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/docs/vla-robotics/what-is-vla">VLA Robotics</a></li><li class="footer__item"><a class="footer__link-item" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/docs/capstone-project/requirements">Capstone Project</a></li></ul></div><div class="col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://stackoverflow.com/questions/tagged/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Stack Overflow<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://discordapp.com/invite/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://twitter.com/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Twitter<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div><div class="col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/facebook/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 Physical AI & Humanoid Robotics Textbook. Built with Docusaurus.</div></div></div></footer><div class="chatbot-widget"><button class="chatbot-toggle-button"><span role="img" aria-label="robot">🤖</span> Ask textbook question</button></div></div>
+</body>
+</html>

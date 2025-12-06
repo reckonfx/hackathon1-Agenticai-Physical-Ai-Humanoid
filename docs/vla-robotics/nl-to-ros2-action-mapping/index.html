@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="en" dir="ltr" class="docs-wrapper plugin-docs plugin-id-default docs-version-current docs-doc-page docs-doc-id-vla-robotics/nl-to-ros2-action-mapping" data-has-hydrated="false">
+<head>
+<meta charset="UTF-8">
+<meta name="generator" content="Docusaurus v3.1.0">
+<title data-rh="true">NL → ROS 2 Action Mapping | Physical AI &amp; Humanoid Robotics Textbook</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:image" content="https://reckonfx.github.io/hackathon1-Agenticai-Physical-Ai-Humanoid/img/docusaurus-social-card.jpg"><meta data-rh="true" name="twitter:image" content="https://reckonfx.github.io/hackathon1-Agenticai-Physical-Ai-Humanoid/img/docusaurus-social-card.jpg"><meta data-rh="true" property="og:url" content="https://reckonfx.github.io/hackathon1-Agenticai-Physical-Ai-Humanoid/docs/vla-robotics/nl-to-ros2-action-mapping"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" property="og:locale:alternate" content="ur"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="NL → ROS 2 Action Mapping | Physical AI &amp; Humanoid Robotics Textbook"><meta data-rh="true" name="description" content="Introduction to NL-ROS2 Integration"><meta data-rh="true" property="og:description" content="Introduction to NL-ROS2 Integration"><link data-rh="true" rel="icon" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/img/favicon.ico"><link data-rh="true" rel="canonical" href="https://reckonfx.github.io/hackathon1-Agenticai-Physical-Ai-Humanoid/docs/vla-robotics/nl-to-ros2-action-mapping"><link data-rh="true" rel="alternate" href="https://reckonfx.github.io/hackathon1-Agenticai-Physical-Ai-Humanoid/docs/vla-robotics/nl-to-ros2-action-mapping" hreflang="en"><link data-rh="true" rel="alternate" href="https://reckonfx.github.io/hackathon1-Agenticai-Physical-Ai-Humanoid/ur/docs/vla-robotics/nl-to-ros2-action-mapping" hreflang="ur"><link data-rh="true" rel="alternate" href="https://reckonfx.github.io/hackathon1-Agenticai-Physical-Ai-Humanoid/docs/vla-robotics/nl-to-ros2-action-mapping" hreflang="x-default"><link rel="stylesheet" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/assets/css/styles.6deb0c2d.css">
+<script src="/hackathon1-Agenticai-Physical-Ai-Humanoid/assets/js/runtime~main.32ec6c9d.js" defer="defer"></script>
+<script src="/hackathon1-Agenticai-Physical-Ai-Humanoid/assets/js/main.5a06184d.js" defer="defer"></script>
+</head>
+<body class="navigation-with-keyboard">
+<script>!function(){function t(t){document.documentElement.setAttribute("data-theme",t)}var e=function(){try{return new URLSearchParams(window.location.search).get("docusaurus-theme")}catch(t){}}()||function(){try{return localStorage.getItem("theme")}catch(t){}}();t(null!==e?e:"light")}(),function(){try{const c=new URLSearchParams(window.location.search).entries();for(var[t,e]of c)if(t.startsWith("docusaurus-data-")){var a=t.replace("docusaurus-data-","data-");document.documentElement.setAttribute(a,e)}}catch(t){}}()</script><div id="__docusaurus"><div role="region" aria-label="Skip to main content"><a class="skipToContent_fXgn" href="#__docusaurus_skipToContent_fallback">Skip to main content</a></div><nav aria-label="Main" class="navbar navbar--fixed-top"><div class="navbar__inner"><div class="navbar__items"><button aria-label="Toggle navigation bar" aria-expanded="false" class="navbar__toggle clean-btn" type="button"><svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path></svg></button><a class="navbar__brand" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/"><div class="navbar__logo"><img src="/hackathon1-Agenticai-Physical-Ai-Humanoid/img/logo.svg" alt="Physical AI Logo" class="themedComponent_mlkZ themedComponent--light_NVdE"><img src="/hackathon1-Agenticai-Physical-Ai-Humanoid/img/logo.svg" alt="Physical AI Logo" class="themedComponent_mlkZ themedComponent--dark_xIcU"></div><b class="navbar__title text--truncate">Physical AI &amp; Humanoid Robotics</b></a><a class="navbar__item navbar__link" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/docs/intro-physical-ai/what-is-physical-ai">Textbook</a></div><div class="navbar__items navbar__items--right"><a href="https://github.com/reckonfx/hackathon1-Agenticai-Physical-Ai-Humanoid" target="_blank" rel="noopener noreferrer" class="navbar__item navbar__link">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a><div class="toggle_vylO colorModeToggle_DEke"><button class="clean-btn toggleButton_gllP toggleButtonDisabled_aARS" type="button" disabled="" title="Switch between dark and light mode (currently light mode)" aria-label="Switch between dark and light mode (currently light mode)" aria-live="polite"><svg viewBox="0 0 24 24" width="24" height="24" class="lightToggleIcon_pyhR"><path fill="currentColor" d="M12,9c1.65,0,3,1.35,3,3s-1.35,3-3,3s-3-1.35-3-3S10.35,9,12,9 M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5s5-2.24,5-5 S14.76,7,12,7L12,7z M2,13l2,0c0.55,0,1-0.45,1-1s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S1.45,13,2,13z M20,13l2,0c0.55,0,1-0.45,1-1 s-0.45-1-1-1l-2,0c-0.55,0-1,0.45-1,1S19.45,13,20,13z M11,2v2c0,0.55,0.45,1,1,1s1-0.45,1-1V2c0-0.55-0.45-1-1-1S11,1.45,11,2z M11,20v2c0,0.55,0.45,1,1,1s1-0.45,1-1v-2c0-0.55-0.45-1-1-1C11.45,19,11,19.45,11,20z M5.99,4.58c-0.39-0.39-1.03-0.39-1.41,0 c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0s0.39-1.03,0-1.41L5.99,4.58z M18.36,16.95 c-0.39-0.39-1.03-0.39-1.41,0c-0.39,0.39-0.39,1.03,0,1.41l1.06,1.06c0.39,0.39,1.03,0.39,1.41,0c0.39-0.39,0.39-1.03,0-1.41 L18.36,16.95z M19.42,5.99c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06c-0.39,0.39-0.39,1.03,0,1.41 s1.03,0.39,1.41,0L19.42,5.99z M7.05,18.36c0.39-0.39,0.39-1.03,0-1.41c-0.39-0.39-1.03-0.39-1.41,0l-1.06,1.06 c-0.39,0.39-0.39,1.03,0,1.41s1.03,0.39,1.41,0L7.05,18.36z"></path></svg><svg viewBox="0 0 24 24" width="24" height="24" class="darkToggleIcon_wfgR"><path fill="currentColor" d="M9.37,5.51C9.19,6.15,9.1,6.82,9.1,7.5c0,4.08,3.32,7.4,7.4,7.4c0.68,0,1.35-0.09,1.99-0.27C17.45,17.19,14.93,19,12,19 c-3.86,0-7-3.14-7-7C5,9.07,6.81,6.55,9.37,5.51z M12,3c-4.97,0-9,4.03-9,9s4.03,9,9,9s9-4.03,9-9c0-0.46-0.04-0.92-0.1-1.36 c-0.98,1.37-2.58,2.26-4.4,2.26c-2.98,0-5.4-2.42-5.4-5.4c0-1.81,0.89-3.42,2.26-4.4C12.92,3.04,12.46,3,12,3L12,3z"></path></svg></button></div><div class="navbarSearchContainer_Bca1"></div></div></div><div role="presentation" class="navbar-sidebar__backdrop"></div></nav><div id="__docusaurus_skipToContent_fallback" class="main-wrapper mainWrapper_z2l0"><div class="docsWrapper_hBAB"><button aria-label="Scroll back to top" class="clean-btn theme-back-to-top-button backToTopButton_sjWU" type="button"></button><div class="docRoot_UBD9"><main class="docMainContainer_TBSr docMainContainerEnhanced_lQrH"><div class="container padding-top--md padding-bottom--lg"><div class="row"><div class="col docItemCol_VOVn"><div class="docItemContainer_Djhp"><article><div class="tocCollapsible_ETCw theme-doc-toc-mobile tocMobile_ITEo"><button type="button" class="clean-btn tocCollapsibleButton_TO0P">On this page</button></div><div class="theme-doc-markdown markdown"><h1>Natural Language to ROS 2 Action Mapping in VLA Systems</h1>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="introduction-to-nl-ros2-integration">Introduction to NL-ROS2 Integration<a href="#introduction-to-nl-ros2-integration" class="hash-link" aria-label="Direct link to Introduction to NL-ROS2 Integration" title="Direct link to Introduction to NL-ROS2 Integration">​</a></h2>
+<p>Natural Language to ROS 2 Action Mapping represents a critical component in Vision-Language-Action (VLA) robotic systems, bridging the gap between high-level natural language commands and low-level robotic actions. This mapping process involves interpreting human language commands, understanding their semantic meaning, and translating them into executable ROS 2 actions and services. The integration enables robots to respond to natural language instructions while leveraging the robust communication and control infrastructure provided by ROS 2.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="ros-2-fundamentals-for-nl-integration">ROS 2 Fundamentals for NL Integration<a href="#ros-2-fundamentals-for-nl-integration" class="hash-link" aria-label="Direct link to ROS 2 Fundamentals for NL Integration" title="Direct link to ROS 2 Fundamentals for NL Integration">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="ros-2-architecture">ROS 2 Architecture<a href="#ros-2-architecture" class="hash-link" aria-label="Direct link to ROS 2 Architecture" title="Direct link to ROS 2 Architecture">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="nodes-and-communication">Nodes and Communication<a href="#nodes-and-communication" class="hash-link" aria-label="Direct link to Nodes and Communication" title="Direct link to Nodes and Communication">​</a></h4>
+<ul>
+<li><strong>Node structure</strong>: Understanding ROS 2 node architecture for NL processing</li>
+<li><strong>Topics and messages</strong>: Using topics for continuous data streams</li>
+<li><strong>Services</strong>: Using services for request-response communication</li>
+<li><strong>Actions</strong>: Using actions for goal-oriented, long-running tasks</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="communication-patterns">Communication Patterns<a href="#communication-patterns" class="hash-link" aria-label="Direct link to Communication Patterns" title="Direct link to Communication Patterns">​</a></h4>
+<ul>
+<li><strong>Publisher-subscriber</strong>: Pattern for sensor data and status updates</li>
+<li><strong>Client-server</strong>: Pattern for specific requests and responses</li>
+<li><strong>Action-client</strong>: Pattern for goal-oriented task execution</li>
+<li><strong>Message types</strong>: Standard message types for different data modalities</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="action-architecture">Action Architecture<a href="#action-architecture" class="hash-link" aria-label="Direct link to Action Architecture" title="Direct link to Action Architecture">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="action-definition">Action Definition<a href="#action-definition" class="hash-link" aria-label="Direct link to Action Definition" title="Direct link to Action Definition">​</a></h4>
+<ul>
+<li><strong>Goal definition</strong>: Defining goals for action servers</li>
+<li><strong>Feedback mechanism</strong>: Providing feedback during action execution</li>
+<li><strong>Result reporting</strong>: Reporting final results of action completion</li>
+<li><strong>Preemption handling</strong>: Managing goal preemption and cancellation</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="action-execution">Action Execution<a href="#action-execution" class="hash-link" aria-label="Direct link to Action Execution" title="Direct link to Action Execution">​</a></h4>
+<ul>
+<li><strong>Goal acceptance</strong>: Accepting goals from action clients</li>
+<li><strong>Execution monitoring</strong>: Monitoring action execution progress</li>
+<li><strong>Error handling</strong>: Handling errors during action execution</li>
+<li><strong>Result publishing</strong>: Publishing results upon completion</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="natural-language-processing-pipeline">Natural Language Processing Pipeline<a href="#natural-language-processing-pipeline" class="hash-link" aria-label="Direct link to Natural Language Processing Pipeline" title="Direct link to Natural Language Processing Pipeline">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="language-understanding-components">Language Understanding Components<a href="#language-understanding-components" class="hash-link" aria-label="Direct link to Language Understanding Components" title="Direct link to Language Understanding Components">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="speech-to-text-integration">Speech-to-Text Integration<a href="#speech-to-text-integration" class="hash-link" aria-label="Direct link to Speech-to-Text Integration" title="Direct link to Speech-to-Text Integration">​</a></h4>
+<ul>
+<li><strong>Real-time transcription</strong>: Converting speech to text in real-time</li>
+<li><strong>Context-aware recognition</strong>: Using context to improve recognition</li>
+<li><strong>Speaker identification</strong>: Identifying different speakers</li>
+<li><strong>Noise robustness</strong>: Handling environmental noise</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="semantic-parsing">Semantic Parsing<a href="#semantic-parsing" class="hash-link" aria-label="Direct link to Semantic Parsing" title="Direct link to Semantic Parsing">​</a></h4>
+<ul>
+<li><strong>Intent recognition</strong>: Identifying the intent behind user commands</li>
+<li><strong>Entity extraction</strong>: Extracting relevant entities (objects, locations, etc.)</li>
+<li><strong>Dependency parsing</strong>: Analyzing grammatical structure</li>
+<li><strong>Coreference resolution</strong>: Resolving pronouns and references</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="command-interpretation">Command Interpretation<a href="#command-interpretation" class="hash-link" aria-label="Direct link to Command Interpretation" title="Direct link to Command Interpretation">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="simple-commands">Simple Commands<a href="#simple-commands" class="hash-link" aria-label="Direct link to Simple Commands" title="Direct link to Simple Commands">​</a></h4>
+<ul>
+<li><strong>Direct mapping</strong>: One-to-one mapping between commands and actions</li>
+<li><strong>Keyword extraction</strong>: Identifying keywords that map to actions</li>
+<li><strong>Template matching</strong>: Matching commands to predefined templates</li>
+<li><strong>Parameter extraction</strong>: Extracting parameters from commands</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="complex-commands">Complex Commands<a href="#complex-commands" class="hash-link" aria-label="Direct link to Complex Commands" title="Direct link to Complex Commands">​</a></h4>
+<ul>
+<li><strong>Multi-step decomposition</strong>: Breaking down complex commands into steps</li>
+<li><strong>Conditional processing</strong>: Handling conditional commands</li>
+<li><strong>Quantitative interpretation</strong>: Understanding quantities and measurements</li>
+<li><strong>Temporal processing</strong>: Handling temporal aspects of commands</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="mapping-strategies">Mapping Strategies<a href="#mapping-strategies" class="hash-link" aria-label="Direct link to Mapping Strategies" title="Direct link to Mapping Strategies">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="rule-based-mapping">Rule-Based Mapping<a href="#rule-based-mapping" class="hash-link" aria-label="Direct link to Rule-Based Mapping" title="Direct link to Rule-Based Mapping">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="template-systems">Template Systems<a href="#template-systems" class="hash-link" aria-label="Direct link to Template Systems" title="Direct link to Template Systems">​</a></h4>
+<ul>
+<li><strong>Command templates</strong>: Predefined templates for common commands</li>
+<li><strong>Parameter substitution</strong>: Substituting parameters into templates</li>
+<li><strong>Pattern matching</strong>: Matching commands to template patterns</li>
+<li><strong>Fallback strategies</strong>: Handling unmatched commands</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="semantic-rules">Semantic Rules<a href="#semantic-rules" class="hash-link" aria-label="Direct link to Semantic Rules" title="Direct link to Semantic Rules">​</a></h4>
+<ul>
+<li><strong>Action mapping rules</strong>: Rules mapping semantic concepts to actions</li>
+<li><strong>Context-dependent rules</strong>: Rules that depend on context</li>
+<li><strong>Priority systems</strong>: Prioritizing different interpretation rules</li>
+<li><strong>Conflict resolution</strong>: Resolving conflicts between rules</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="learning-based-mapping">Learning-Based Mapping<a href="#learning-based-mapping" class="hash-link" aria-label="Direct link to Learning-Based Mapping" title="Direct link to Learning-Based Mapping">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="supervised-learning">Supervised Learning<a href="#supervised-learning" class="hash-link" aria-label="Direct link to Supervised Learning" title="Direct link to Supervised Learning">​</a></h4>
+<ul>
+<li><strong>Labeled datasets</strong>: Training on labeled command-action pairs</li>
+<li><strong>Feature engineering</strong>: Extracting features for classification</li>
+<li><strong>Classification models</strong>: Using models to classify commands</li>
+<li><strong>Evaluation metrics</strong>: Measuring mapping accuracy</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="reinforcement-learning">Reinforcement Learning<a href="#reinforcement-learning" class="hash-link" aria-label="Direct link to Reinforcement Learning" title="Direct link to Reinforcement Learning">​</a></h4>
+<ul>
+<li><strong>Reward shaping</strong>: Designing rewards for correct mappings</li>
+<li><strong>Exploration strategies</strong>: Exploring different mapping strategies</li>
+<li><strong>Policy learning</strong>: Learning policies for command interpretation</li>
+<li><strong>Adaptive learning</strong>: Learning from user feedback</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="hybrid-approaches">Hybrid Approaches<a href="#hybrid-approaches" class="hash-link" aria-label="Direct link to Hybrid Approaches" title="Direct link to Hybrid Approaches">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="rule-based-with-learning-enhancement">Rule-Based with Learning Enhancement<a href="#rule-based-with-learning-enhancement" class="hash-link" aria-label="Direct link to Rule-Based with Learning Enhancement" title="Direct link to Rule-Based with Learning Enhancement">​</a></h4>
+<ul>
+<li><strong>Initial rules</strong>: Starting with rule-based system</li>
+<li><strong>Learning refinement</strong>: Using learning to refine rules</li>
+<li><strong>Human feedback</strong>: Incorporating human feedback for improvement</li>
+<li><strong>Continuous adaptation</strong>: Adapting over time</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="learning-based-with-rule-constraints">Learning-Based with Rule Constraints<a href="#learning-based-with-rule-constraints" class="hash-link" aria-label="Direct link to Learning-Based with Rule Constraints" title="Direct link to Learning-Based with Rule Constraints">​</a></h4>
+<ul>
+<li><strong>Learning with constraints</strong>: Learning within rule-based constraints</li>
+<li><strong>Safety guarantees</strong>: Ensuring safety through constraints</li>
+<li><strong>Interpretability</strong>: Maintaining interpretability</li>
+<li><strong>Verification</strong>: Verifying learned mappings</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="vla-system-integration">VLA System Integration<a href="#vla-system-integration" class="hash-link" aria-label="Direct link to VLA System Integration" title="Direct link to VLA System Integration">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="vision-integration">Vision Integration<a href="#vision-integration" class="hash-link" aria-label="Direct link to Vision Integration" title="Direct link to Vision Integration">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="object-recognition">Object Recognition<a href="#object-recognition" class="hash-link" aria-label="Direct link to Object Recognition" title="Direct link to Object Recognition">​</a></h4>
+<ul>
+<li><strong>Visual grounding</strong>: Connecting language to visual objects</li>
+<li><strong>Object identification</strong>: Identifying objects mentioned in commands</li>
+<li><strong>Pose estimation</strong>: Estimating poses of relevant objects</li>
+<li><strong>Tracking</strong>: Tracking objects during task execution</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="scene-understanding">Scene Understanding<a href="#scene-understanding" class="hash-link" aria-label="Direct link to Scene Understanding" title="Direct link to Scene Understanding">​</a></h4>
+<ul>
+<li><strong>Spatial relationships</strong>: Understanding spatial relationships</li>
+<li><strong>Environment modeling</strong>: Building environment models</li>
+<li><strong>Change detection</strong>: Detecting environmental changes</li>
+<li><strong>Context awareness</strong>: Understanding environmental context</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="action-execution-1">Action Execution<a href="#action-execution-1" class="hash-link" aria-label="Direct link to Action Execution" title="Direct link to Action Execution">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="low-level-control">Low-Level Control<a href="#low-level-control" class="hash-link" aria-label="Direct link to Low-Level Control" title="Direct link to Low-Level Control">​</a></h4>
+<ul>
+<li><strong>Joint control</strong>: Controlling robot joints and actuators</li>
+<li><strong>End-effector control</strong>: Controlling grippers and end-effectors</li>
+<li><strong>Navigation control</strong>: Controlling robot navigation</li>
+<li><strong>Safety constraints</strong>: Maintaining safety during execution</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="high-level-task-management">High-Level Task Management<a href="#high-level-task-management" class="hash-link" aria-label="Direct link to High-Level Task Management" title="Direct link to High-Level Task Management">​</a></h4>
+<ul>
+<li><strong>Task sequencing</strong>: Sequencing actions to complete tasks</li>
+<li><strong>Resource management</strong>: Managing robot resources</li>
+<li><strong>Error recovery</strong>: Recovering from execution errors</li>
+<li><strong>Task monitoring</strong>: Monitoring task progress</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="implementation-architecture">Implementation Architecture<a href="#implementation-architecture" class="hash-link" aria-label="Direct link to Implementation Architecture" title="Direct link to Implementation Architecture">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="system-components">System Components<a href="#system-components" class="hash-link" aria-label="Direct link to System Components" title="Direct link to System Components">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="natural-language-interface">Natural Language Interface<a href="#natural-language-interface" class="hash-link" aria-label="Direct link to Natural Language Interface" title="Direct link to Natural Language Interface">​</a></h4>
+<ul>
+<li><strong>Input processing</strong>: Processing natural language input</li>
+<li><strong>Understanding module</strong>: Understanding command semantics</li>
+<li><strong>Mapping module</strong>: Mapping to ROS 2 actions</li>
+<li><strong>Output generation</strong>: Generating ROS 2 messages and actions</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="ros-2-integration-layer">ROS 2 Integration Layer<a href="#ros-2-integration-layer" class="hash-link" aria-label="Direct link to ROS 2 Integration Layer" title="Direct link to ROS 2 Integration Layer">​</a></h4>
+<ul>
+<li><strong>Action clients</strong>: Creating action clients for different services</li>
+<li><strong>Message publishers</strong>: Publishing messages to appropriate topics</li>
+<li><strong>Service clients</strong>: Calling ROS 2 services as needed</li>
+<li><strong>Parameter management</strong>: Managing ROS 2 parameters</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="execution-manager">Execution Manager<a href="#execution-manager" class="hash-link" aria-label="Direct link to Execution Manager" title="Direct link to Execution Manager">​</a></h4>
+<ul>
+<li><strong>Goal management</strong>: Managing action goals</li>
+<li><strong>Execution monitoring</strong>: Monitoring action execution</li>
+<li><strong>Error handling</strong>: Handling execution errors</li>
+<li><strong>Status reporting</strong>: Reporting execution status</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="data-flow-management">Data Flow Management<a href="#data-flow-management" class="hash-link" aria-label="Direct link to Data Flow Management" title="Direct link to Data Flow Management">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="message-routing">Message Routing<a href="#message-routing" class="hash-link" aria-label="Direct link to Message Routing" title="Direct link to Message Routing">​</a></h4>
+<ul>
+<li><strong>Topic routing</strong>: Routing messages to appropriate topics</li>
+<li><strong>Service routing</strong>: Routing service calls appropriately</li>
+<li><strong>Action routing</strong>: Routing action goals to appropriate servers</li>
+<li><strong>Filtering</strong>: Filtering and processing messages</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="synchronization">Synchronization<a href="#synchronization" class="hash-link" aria-label="Direct link to Synchronization" title="Direct link to Synchronization">​</a></h4>
+<ul>
+<li><strong>Temporal alignment</strong>: Aligning different data streams</li>
+<li><strong>State consistency</strong>: Maintaining consistent system state</li>
+<li><strong>Latency management</strong>: Managing processing latencies</li>
+<li><strong>Buffer management</strong>: Managing data buffers</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="practical-implementation-examples">Practical Implementation Examples<a href="#practical-implementation-examples" class="hash-link" aria-label="Direct link to Practical Implementation Examples" title="Direct link to Practical Implementation Examples">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="navigation-commands">Navigation Commands<a href="#navigation-commands" class="hash-link" aria-label="Direct link to Navigation Commands" title="Direct link to Navigation Commands">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="simple-navigation">Simple Navigation<a href="#simple-navigation" class="hash-link" aria-label="Direct link to Simple Navigation" title="Direct link to Simple Navigation">​</a></h4>
+<ul>
+<li><strong>&quot;Go to the kitchen&quot;</strong>: Mapping to navigation actions</li>
+<li><strong>&quot;Move forward 2 meters&quot;</strong>: Mapping to relative movement</li>
+<li><strong>&quot;Turn left&quot;</strong>: Mapping to rotation actions</li>
+<li><strong>&quot;Stop&quot;</strong>: Mapping to emergency stop</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="complex-navigation">Complex Navigation<a href="#complex-navigation" class="hash-link" aria-label="Direct link to Complex Navigation" title="Direct link to Complex Navigation">​</a></h4>
+<ul>
+<li><strong>&quot;Go to the red chair near the window&quot;</strong>: Combining navigation with object recognition</li>
+<li><strong>&quot;Follow me&quot;</strong>: Mapping to following behavior</li>
+<li><strong>&quot;Explore the room&quot;</strong>: Mapping to exploration behavior</li>
+<li><strong>&quot;Return to charging station&quot;</strong>: Mapping to autonomous return</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="manipulation-commands">Manipulation Commands<a href="#manipulation-commands" class="hash-link" aria-label="Direct link to Manipulation Commands" title="Direct link to Manipulation Commands">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="object-manipulation">Object Manipulation<a href="#object-manipulation" class="hash-link" aria-label="Direct link to Object Manipulation" title="Direct link to Object Manipulation">​</a></h4>
+<ul>
+<li><strong>&quot;Pick up the red cup&quot;</strong>: Mapping to grasping actions</li>
+<li><strong>&quot;Place the book on the table&quot;</strong>: Mapping to placement actions</li>
+<li><strong>&quot;Open the door&quot;</strong>: Mapping to manipulation actions</li>
+<li><strong>&quot;Pour water into the glass&quot;</strong>: Mapping to complex manipulation</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="tool-use">Tool Use<a href="#tool-use" class="hash-link" aria-label="Direct link to Tool Use" title="Direct link to Tool Use">​</a></h4>
+<ul>
+<li><strong>&quot;Use the screwdriver to tighten the screw&quot;</strong>: Mapping to tool use</li>
+<li><strong>&quot;Sweep the floor&quot;</strong>: Mapping to sweeping actions</li>
+<li><strong>&quot;Wipe the table&quot;</strong>: Mapping to cleaning actions</li>
+<li><strong>&quot;Assemble the parts&quot;</strong>: Mapping to assembly actions</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="interaction-commands">Interaction Commands<a href="#interaction-commands" class="hash-link" aria-label="Direct link to Interaction Commands" title="Direct link to Interaction Commands">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="human-interaction">Human Interaction<a href="#human-interaction" class="hash-link" aria-label="Direct link to Human Interaction" title="Direct link to Human Interaction">​</a></h4>
+<ul>
+<li><strong>&quot;Wave to John&quot;</strong>: Mapping to gesture actions</li>
+<li><strong>&quot;Greet the visitor&quot;</strong>: Mapping to greeting behavior</li>
+<li><strong>&quot;Lead the person to the meeting room&quot;</strong>: Mapping to guidance behavior</li>
+<li><strong>&quot;Wait for me&quot;</strong>: Mapping to waiting behavior</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="information-commands">Information Commands<a href="#information-commands" class="hash-link" aria-label="Direct link to Information Commands" title="Direct link to Information Commands">​</a></h4>
+<ul>
+<li><strong>&quot;What is on the table?&quot;</strong>: Mapping to perception and reporting</li>
+<li><strong>&quot;Find my keys&quot;</strong>: Mapping to search behavior</li>
+<li><strong>&quot;Show me the red object&quot;</strong>: Mapping to object identification</li>
+<li><strong>&quot;Count the bottles&quot;</strong>: Mapping to counting behavior</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="advanced-mapping-techniques">Advanced Mapping Techniques<a href="#advanced-mapping-techniques" class="hash-link" aria-label="Direct link to Advanced Mapping Techniques" title="Direct link to Advanced Mapping Techniques">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="context-aware-mapping">Context-Aware Mapping<a href="#context-aware-mapping" class="hash-link" aria-label="Direct link to Context-Aware Mapping" title="Direct link to Context-Aware Mapping">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="environmental-context">Environmental Context<a href="#environmental-context" class="hash-link" aria-label="Direct link to Environmental Context" title="Direct link to Environmental Context">​</a></h4>
+<ul>
+<li><strong>Location awareness</strong>: Adapting mappings based on location</li>
+<li><strong>Object availability</strong>: Adapting based on available objects</li>
+<li><strong>Time awareness</strong>: Adapting based on time of day or context</li>
+<li><strong>User context</strong>: Adapting based on user preferences</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="task-context">Task Context<a href="#task-context" class="hash-link" aria-label="Direct link to Task Context" title="Direct link to Task Context">​</a></h4>
+<ul>
+<li><strong>Current task</strong>: Adapting based on current task state</li>
+<li><strong>Task history</strong>: Adapting based on task execution history</li>
+<li><strong>Goal context</strong>: Adapting based on overall goal</li>
+<li><strong>Collaboration context</strong>: Adapting based on collaboration needs</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="ambiguity-resolution">Ambiguity Resolution<a href="#ambiguity-resolution" class="hash-link" aria-label="Direct link to Ambiguity Resolution" title="Direct link to Ambiguity Resolution">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="command-clarification">Command Clarification<a href="#command-clarification" class="hash-link" aria-label="Direct link to Command Clarification" title="Direct link to Command Clarification">​</a></h4>
+<ul>
+<li><strong>Request clarification</strong>: Requesting clarification for ambiguous commands</li>
+<li><strong>Multiple interpretations</strong>: Handling multiple possible interpretations</li>
+<li><strong>Confidence-based selection</strong>: Selecting based on confidence scores</li>
+<li><strong>User feedback</strong>: Incorporating user feedback for resolution</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="default-resolution">Default Resolution<a href="#default-resolution" class="hash-link" aria-label="Direct link to Default Resolution" title="Direct link to Default Resolution">​</a></h4>
+<ul>
+<li><strong>Default parameters</strong>: Using default parameters for underspecified commands</li>
+<li><strong>Context-based defaults</strong>: Using context to determine defaults</li>
+<li><strong>User preferences</strong>: Using learned user preferences</li>
+<li><strong>Safety defaults</strong>: Using safe defaults for ambiguous commands</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="evaluation-and-testing">Evaluation and Testing<a href="#evaluation-and-testing" class="hash-link" aria-label="Direct link to Evaluation and Testing" title="Direct link to Evaluation and Testing">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="mapping-quality-metrics">Mapping Quality Metrics<a href="#mapping-quality-metrics" class="hash-link" aria-label="Direct link to Mapping Quality Metrics" title="Direct link to Mapping Quality Metrics">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="accuracy-metrics">Accuracy Metrics<a href="#accuracy-metrics" class="hash-link" aria-label="Direct link to Accuracy Metrics" title="Direct link to Accuracy Metrics">​</a></h4>
+<ul>
+<li><strong>Command interpretation accuracy</strong>: Percentage of correctly interpreted commands</li>
+<li><strong>Action execution success</strong>: Percentage of successfully executed actions</li>
+<li><strong>Response time</strong>: Time from command to action initiation</li>
+<li><strong>Error rate</strong>: Rate of incorrect interpretations</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="user-experience-metrics">User Experience Metrics<a href="#user-experience-metrics" class="hash-link" aria-label="Direct link to User Experience Metrics" title="Direct link to User Experience Metrics">​</a></h4>
+<ul>
+<li><strong>Naturalness</strong>: How natural the interaction feels to users</li>
+<li><strong>Intuitiveness</strong>: How intuitive the command interface is</li>
+<li><strong>Learnability</strong>: How easily users can learn to use the system</li>
+<li><strong>Satisfaction</strong>: User satisfaction with the system</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="testing-methodologies">Testing Methodologies<a href="#testing-methodologies" class="hash-link" aria-label="Direct link to Testing Methodologies" title="Direct link to Testing Methodologies">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="automated-testing">Automated Testing<a href="#automated-testing" class="hash-link" aria-label="Direct link to Automated Testing" title="Direct link to Automated Testing">​</a></h4>
+<ul>
+<li><strong>Unit testing</strong>: Testing individual mapping components</li>
+<li><strong>Integration testing</strong>: Testing complete mapping pipeline</li>
+<li><strong>Regression testing</strong>: Ensuring changes don&#x27;t break existing functionality</li>
+<li><strong>Performance testing</strong>: Testing system performance under load</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="user-studies">User Studies<a href="#user-studies" class="hash-link" aria-label="Direct link to User Studies" title="Direct link to User Studies">​</a></h4>
+<ul>
+<li><strong>Controlled experiments</strong>: Controlled studies of mapping effectiveness</li>
+<li><strong>Long-term studies</strong>: Studies of long-term interaction</li>
+<li><strong>Comparative studies</strong>: Comparing different mapping approaches</li>
+<li><strong>Qualitative feedback</strong>: Collecting qualitative user feedback</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="challenges-and-solutions">Challenges and Solutions<a href="#challenges-and-solutions" class="hash-link" aria-label="Direct link to Challenges and Solutions" title="Direct link to Challenges and Solutions">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="technical-challenges">Technical Challenges<a href="#technical-challenges" class="hash-link" aria-label="Direct link to Technical Challenges" title="Direct link to Technical Challenges">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="ambiguity-resolution-1">Ambiguity Resolution<a href="#ambiguity-resolution-1" class="hash-link" aria-label="Direct link to Ambiguity Resolution" title="Direct link to Ambiguity Resolution">​</a></h4>
+<ul>
+<li><strong>Vocabulary limitations</strong>: Handling out-of-vocabulary terms</li>
+<li><strong>Context dependency</strong>: Resolving context-dependent ambiguities</li>
+<li><strong>Multi-modal integration</strong>: Integrating multiple sensory modalities</li>
+<li><strong>Real-time processing</strong>: Meeting real-time processing requirements</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="robustness-issues">Robustness Issues<a href="#robustness-issues" class="hash-link" aria-label="Direct link to Robustness Issues" title="Direct link to Robustness Issues">​</a></h4>
+<ul>
+<li><strong>Noise tolerance</strong>: Handling noisy input and environmental conditions</li>
+<li><strong>Failure recovery</strong>: Recovering from mapping and execution failures</li>
+<li><strong>Partial understanding</strong>: Handling partially understood commands</li>
+<li><strong>Adaptation</strong>: Adapting to new commands and situations</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="integration-challenges">Integration Challenges<a href="#integration-challenges" class="hash-link" aria-label="Direct link to Integration Challenges" title="Direct link to Integration Challenges">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="ros-2-complexity">ROS 2 Complexity<a href="#ros-2-complexity" class="hash-link" aria-label="Direct link to ROS 2 Complexity" title="Direct link to ROS 2 Complexity">​</a></h4>
+<ul>
+<li><strong>System complexity</strong>: Managing complex ROS 2 system architecture</li>
+<li><strong>Message types</strong>: Handling diverse ROS 2 message types</li>
+<li><strong>Network issues</strong>: Managing network-related communication issues</li>
+<li><strong>Synchronization</strong>: Managing timing and synchronization issues</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="multi-robot-systems">Multi-robot Systems<a href="#multi-robot-systems" class="hash-link" aria-label="Direct link to Multi-robot Systems" title="Direct link to Multi-robot Systems">​</a></h4>
+<ul>
+<li><strong>Coordination</strong>: Coordinating mapping across multiple robots</li>
+<li><strong>Conflict resolution</strong>: Resolving conflicts between robots</li>
+<li><strong>Resource allocation</strong>: Allocating resources across robots</li>
+<li><strong>Communication</strong>: Managing inter-robot communication</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="future-directions">Future Directions<a href="#future-directions" class="hash-link" aria-label="Direct link to Future Directions" title="Direct link to Future Directions">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="advanced-technologies">Advanced Technologies<a href="#advanced-technologies" class="hash-link" aria-label="Direct link to Advanced Technologies" title="Direct link to Advanced Technologies">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="large-language-models">Large Language Models<a href="#large-language-models" class="hash-link" aria-label="Direct link to Large Language Models" title="Direct link to Large Language Models">​</a></h4>
+<ul>
+<li><strong>LLM integration</strong>: Integrating large language models for better understanding</li>
+<li><strong>Chain-of-thought reasoning</strong>: Using reasoning chains for complex commands</li>
+<li><strong>Few-shot learning</strong>: Learning new mappings from few examples</li>
+<li><strong>Context-aware generation</strong>: Generating context-aware responses</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="advanced-perception">Advanced Perception<a href="#advanced-perception" class="hash-link" aria-label="Direct link to Advanced Perception" title="Direct link to Advanced Perception">​</a></h4>
+<ul>
+<li><strong>Multimodal fusion</strong>: Better fusion of multiple sensory modalities</li>
+<li><strong>3D understanding</strong>: Enhanced 3D scene understanding</li>
+<li><strong>Dynamic perception</strong>: Understanding dynamic environments</li>
+<li><strong>Social perception</strong>: Understanding social contexts</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="research-frontiers">Research Frontiers<a href="#research-frontiers" class="hash-link" aria-label="Direct link to Research Frontiers" title="Direct link to Research Frontiers">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="explainable-ai">Explainable AI<a href="#explainable-ai" class="hash-link" aria-label="Direct link to Explainable AI" title="Direct link to Explainable AI">​</a></h4>
+<ul>
+<li><strong>Interpretability</strong>: Making mappings interpretable to users</li>
+<li><strong>Explanation generation</strong>: Generating explanations for actions</li>
+<li><strong>Trust calibration</strong>: Calibrating user trust in the system</li>
+<li><strong>Debugging tools</strong>: Providing tools for debugging mappings</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="collaborative-systems">Collaborative Systems<a href="#collaborative-systems" class="hash-link" aria-label="Direct link to Collaborative Systems" title="Direct link to Collaborative Systems">​</a></h4>
+<ul>
+<li><strong>Multi-human interaction</strong>: Handling commands from multiple humans</li>
+<li><strong>Multi-robot coordination</strong>: Coordinating actions across multiple robots</li>
+<li><strong>Shared understanding</strong>: Developing shared understanding models</li>
+<li><strong>Collective intelligence</strong>: Leveraging collective intelligence</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="applications-and-impact">Applications and Impact<a href="#applications-and-impact" class="hash-link" aria-label="Direct link to Applications and Impact" title="Direct link to Applications and Impact">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="service-robotics-applications">Service Robotics Applications<a href="#service-robotics-applications" class="hash-link" aria-label="Direct link to Service Robotics Applications" title="Direct link to Service Robotics Applications">​</a></h3>
+<ul>
+<li><strong>Home assistance</strong>: Assisting with daily household tasks</li>
+<li><strong>Healthcare support</strong>: Supporting healthcare and elderly care</li>
+<li><strong>Customer service</strong>: Providing customer service and assistance</li>
+<li><strong>Educational support</strong>: Supporting educational activities</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="industrial-applications">Industrial Applications<a href="#industrial-applications" class="hash-link" aria-label="Direct link to Industrial Applications" title="Direct link to Industrial Applications">​</a></h3>
+<ul>
+<li><strong>Manufacturing assistance</strong>: Assisting in manufacturing processes</li>
+<li><strong>Quality control</strong>: Performing quality control tasks</li>
+<li><strong>Maintenance support</strong>: Supporting maintenance activities</li>
+<li><strong>Logistics support</strong>: Supporting logistics and warehousing</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="research-and-development">Research and Development<a href="#research-and-development" class="hash-link" aria-label="Direct link to Research and Development" title="Direct link to Research and Development">​</a></h3>
+<ul>
+<li><strong>Human-robot interaction</strong>: Advancing human-robot interaction research</li>
+<li><strong>Cognitive robotics</strong>: Advancing cognitive robotics research</li>
+<li><strong>AI integration</strong>: Advancing AI integration in robotics</li>
+<li><strong>Natural interfaces</strong>: Developing natural human-robot interfaces</li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="summary">Summary<a href="#summary" class="hash-link" aria-label="Direct link to Summary" title="Direct link to Summary">​</a></h2>
+<p>Natural Language to ROS 2 Action Mapping is a critical component of VLA robotic systems, enabling robots to understand and execute natural language commands using the robust ROS 2 infrastructure. The mapping process involves complex natural language processing, semantic understanding, and translation to executable ROS 2 actions. While significant challenges remain in terms of ambiguity resolution, robustness, and system integration, advances in machine learning, particularly with large language models, continue to improve the capabilities of these systems. As the field progresses, NL-ROS2 mapping will become increasingly important for creating intuitive and natural human-robot interaction in a wide range of applications.</p>
+<hr>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="further-reading">Further Reading<a href="#further-reading" class="hash-link" aria-label="Direct link to Further Reading" title="Direct link to Further Reading">​</a></h2>
+<ul>
+<li>Quigley, M., et al. (2009). ROS: an open-source Robot Operating System</li>
+<li>Fox, D., et al. (2020). The Robot Operating System 2: Design, refactoring, and verification</li>
+<li>Misra, D., et al. (2022). VOCE: A Dataset for Object-Centric Action Understanding in Audio-Visual Settings</li>
+</ul></div><footer class="theme-doc-footer docusaurus-mt-lg"><div class="theme-doc-footer-edit-meta-row row"><div class="col"><a href="https://github.com/reckonfx/hackathon1-Agenticai-Physical-Ai-Humanoid/tree/main/docs/vla-robotics/nl-to-ros2-action-mapping.md" target="_blank" rel="noopener noreferrer" class="theme-edit-this-page"><svg fill="currentColor" height="20" width="20" viewBox="0 0 40 40" class="iconEdit_Z9Sw" aria-hidden="true"><g><path d="m34.5 11.7l-3 3.1-6.3-6.3 3.1-3q0.5-0.5 1.2-0.5t1.1 0.5l3.9 3.9q0.5 0.4 0.5 1.1t-0.5 1.2z m-29.5 17.1l18.4-18.5 6.3 6.3-18.4 18.4h-6.3v-6.2z"></path></g></svg>Edit this page</a></div><div class="col lastUpdated_vwxv"></div></div></footer></article><nav class="pagination-nav docusaurus-mt-lg" aria-label="Docs pages"></nav></div></div><div class="col col--3"><div class="tableOfContents_bqdL thin-scrollbar theme-doc-toc-desktop"><ul class="table-of-contents table-of-contents__left-border"><li><a href="#introduction-to-nl-ros2-integration" class="table-of-contents__link toc-highlight">Introduction to NL-ROS2 Integration</a></li><li><a href="#ros-2-fundamentals-for-nl-integration" class="table-of-contents__link toc-highlight">ROS 2 Fundamentals for NL Integration</a><ul><li><a href="#ros-2-architecture" class="table-of-contents__link toc-highlight">ROS 2 Architecture</a></li><li><a href="#action-architecture" class="table-of-contents__link toc-highlight">Action Architecture</a></li></ul></li><li><a href="#natural-language-processing-pipeline" class="table-of-contents__link toc-highlight">Natural Language Processing Pipeline</a><ul><li><a href="#language-understanding-components" class="table-of-contents__link toc-highlight">Language Understanding Components</a></li><li><a href="#command-interpretation" class="table-of-contents__link toc-highlight">Command Interpretation</a></li></ul></li><li><a href="#mapping-strategies" class="table-of-contents__link toc-highlight">Mapping Strategies</a><ul><li><a href="#rule-based-mapping" class="table-of-contents__link toc-highlight">Rule-Based Mapping</a></li><li><a href="#learning-based-mapping" class="table-of-contents__link toc-highlight">Learning-Based Mapping</a></li><li><a href="#hybrid-approaches" class="table-of-contents__link toc-highlight">Hybrid Approaches</a></li></ul></li><li><a href="#vla-system-integration" class="table-of-contents__link toc-highlight">VLA System Integration</a><ul><li><a href="#vision-integration" class="table-of-contents__link toc-highlight">Vision Integration</a></li><li><a href="#action-execution-1" class="table-of-contents__link toc-highlight">Action Execution</a></li></ul></li><li><a href="#implementation-architecture" class="table-of-contents__link toc-highlight">Implementation Architecture</a><ul><li><a href="#system-components" class="table-of-contents__link toc-highlight">System Components</a></li><li><a href="#data-flow-management" class="table-of-contents__link toc-highlight">Data Flow Management</a></li></ul></li><li><a href="#practical-implementation-examples" class="table-of-contents__link toc-highlight">Practical Implementation Examples</a><ul><li><a href="#navigation-commands" class="table-of-contents__link toc-highlight">Navigation Commands</a></li><li><a href="#manipulation-commands" class="table-of-contents__link toc-highlight">Manipulation Commands</a></li><li><a href="#interaction-commands" class="table-of-contents__link toc-highlight">Interaction Commands</a></li></ul></li><li><a href="#advanced-mapping-techniques" class="table-of-contents__link toc-highlight">Advanced Mapping Techniques</a><ul><li><a href="#context-aware-mapping" class="table-of-contents__link toc-highlight">Context-Aware Mapping</a></li><li><a href="#ambiguity-resolution" class="table-of-contents__link toc-highlight">Ambiguity Resolution</a></li></ul></li><li><a href="#evaluation-and-testing" class="table-of-contents__link toc-highlight">Evaluation and Testing</a><ul><li><a href="#mapping-quality-metrics" class="table-of-contents__link toc-highlight">Mapping Quality Metrics</a></li><li><a href="#testing-methodologies" class="table-of-contents__link toc-highlight">Testing Methodologies</a></li></ul></li><li><a href="#challenges-and-solutions" class="table-of-contents__link toc-highlight">Challenges and Solutions</a><ul><li><a href="#technical-challenges" class="table-of-contents__link toc-highlight">Technical Challenges</a></li><li><a href="#integration-challenges" class="table-of-contents__link toc-highlight">Integration Challenges</a></li></ul></li><li><a href="#future-directions" class="table-of-contents__link toc-highlight">Future Directions</a><ul><li><a href="#advanced-technologies" class="table-of-contents__link toc-highlight">Advanced Technologies</a></li><li><a href="#research-frontiers" class="table-of-contents__link toc-highlight">Research Frontiers</a></li></ul></li><li><a href="#applications-and-impact" class="table-of-contents__link toc-highlight">Applications and Impact</a><ul><li><a href="#service-robotics-applications" class="table-of-contents__link toc-highlight">Service Robotics Applications</a></li><li><a href="#industrial-applications" class="table-of-contents__link toc-highlight">Industrial Applications</a></li><li><a href="#research-and-development" class="table-of-contents__link toc-highlight">Research and Development</a></li></ul></li><li><a href="#summary" class="table-of-contents__link toc-highlight">Summary</a></li><li><a href="#further-reading" class="table-of-contents__link toc-highlight">Further Reading</a></li></ul></div></div></div></div></main></div></div></div><footer class="footer footer--dark"><div class="container container-fluid"><div class="row footer__links"><div class="col footer__col"><div class="footer__title">Modules</div><ul class="footer__items clean-list"><li class="footer__item"><a class="footer__link-item" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/docs/intro-physical-ai/what-is-physical-ai">Introduction &amp; Physical AI Foundations</a></li><li class="footer__item"><a class="footer__link-item" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/docs/ros2-fundamentals/ros2-architecture">ROS 2 Fundamentals</a></li><li class="footer__item"><a class="footer__link-item" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/docs/robot-simulation/gazebo-setup">Robot Simulation</a></li><li class="footer__item"><a class="footer__link-item" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/docs/nvidia-isaac/isaac-sim-overview">NVIDIA Isaac Platform</a></li><li class="footer__item"><a class="footer__link-item" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/docs/humanoid-development/humanoid-kinematics">Humanoid Robot Development</a></li><li class="footer__item"><a class="footer__link-item" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/docs/vla-robotics/what-is-vla">VLA Robotics</a></li><li class="footer__item"><a class="footer__link-item" href="/hackathon1-Agenticai-Physical-Ai-Humanoid/docs/capstone-project/requirements">Capstone Project</a></li></ul></div><div class="col footer__col"><div class="footer__title">Community</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://stackoverflow.com/questions/tagged/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Stack Overflow<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://discordapp.com/invite/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Discord<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li><li class="footer__item"><a href="https://twitter.com/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">Twitter<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div><div class="col footer__col"><div class="footer__title">More</div><ul class="footer__items clean-list"><li class="footer__item"><a href="https://github.com/facebook/docusaurus" target="_blank" rel="noopener noreferrer" class="footer__link-item">GitHub<svg width="13.5" height="13.5" aria-hidden="true" viewBox="0 0 24 24" class="iconExternalLink_nPIU"><path fill="currentColor" d="M21 13v10h-21v-19h12v2h-10v15h17v-8h2zm3-12h-10.988l4.035 4-6.977 7.07 2.828 2.828 6.977-7.07 4.125 4.172v-11z"></path></svg></a></li></ul></div></div><div class="footer__bottom text--center"><div class="footer__copyright">Copyright © 2025 Physical AI & Humanoid Robotics Textbook. Built with Docusaurus.</div></div></div></footer><div class="chatbot-widget"><button class="chatbot-toggle-button"><span role="img" aria-label="robot">🤖</span> Ask textbook question</button></div></div>
+</body>
+</html>

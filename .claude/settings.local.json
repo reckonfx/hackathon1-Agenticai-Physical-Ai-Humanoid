@@ -1,0 +1,37 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git fetch --all --prune)",
+      "Bash(ls -1d specs/*)",
+      "Bash(powershell -ExecutionPolicy Bypass -File \".specify/scripts/powershell/create-new-feature.ps1\" -Json -Number 1 -ShortName \"textbook-spec\" -FeatureDescription \"Creates the requirements specification.\nCreate a complete requirements SPECIFICATION for the “Physical AI & Humanoid Robotics” textbook project.\n\nYou MUST use the following:\n\nSYSTEM COMPONENTS:\n- Docusaurus for UI (docs/*.md, sidebar.js, components)\n- GitHub auto-commit for every file change\n- Context7 MCP to read the hackathon PDF and project files\n- Spec-Kit Plus for generating chapters, tasks, plans\n- Claude CLI for file generation/editing\n- Backend with FastAPI + Qdrant + Neon + OpenAI Agents for RAG chatbot\n\nREQUIREMENTS DOCUMENT MUST INCLUDE:\n1. Project Overview\n2. Functional Requirements\n   - Modules, lessons, subtopics (full list provided below)\n   - RAG chatbot integrated into Docusaurus\n   - Personalization button (optional bonus)\n   - Urdu translation button (optional bonus)\n3. Non-functional Requirements\n4. File/folder structure for:\n   - Docusaurus\n   - Spec-Kit\n   - RAG backend\n5. Constraints\n6. Acceptance criteria\n7. GitHub auto-commit workflow requirements\n8. Context7 usage rules\n\nALL CONT\")",
+      "Bash(.specify/scripts/powershell/check-prerequisites.ps1 -Json -RequireTasks -IncludeTasks)",
+      "Bash(powershell -Command \"New-Item -ItemType Directory -Path ''src/css'' -Force\")",
+      "Bash(find history/prompts/ -name \"*.prompt.md\" -exec ls -la {} ;)",
+      "Bash(sort -k6,7)",
+      "Bash(find . -name \"*.py\" -not -path \"./.*\" -not -path \"./backend/*\" -not -path \"./history/*\" -not -path \"./.specify/*\" -exec ls -la {} ;)",
+      "Bash(find docs/ -name \"*.md\" -exec basename {} ;)",
+      "Bash(mkdir -p docs/humanoid-development docs/vla-robotics docs/capstone-project)",
+      "Bash(touch docs/humanoid-development/humanoid-kinematics.md docs/humanoid-development/dynamics-control.md docs/humanoid-development/bipedal-locomotion.md docs/humanoid-development/balance-control.md docs/humanoid-development/manipulation-grasping.md docs/humanoid-development/human-robot-interaction.md)",
+      "Bash(touch docs/vla-robotics/what-is-vla.md docs/vla-robotics/voice-to-action.md docs/vla-robotics/cognitive-planning-llms.md docs/vla-robotics/multi-modal-perception.md docs/vla-robotics/nl-ros2-action-mapping.md)",
+      "Bash(touch docs/capstone-project/requirements.md docs/capstone-project/system-architecture.md docs/capstone-project/navigation-obstacle-avoidance.md docs/capstone-project/object-recognition.md docs/capstone-project/grasping-manipulation.md docs/capstone-project/full-demo.md)",
+      "Bash(mv docs/humanoid-applications/locomotion-gait-control.md docs/humanoid-development/)",
+      "Bash(rmdir docs/humanoid-applications/)",
+      "Bash(mkdir -p backend/api backend/services backend/models backend/config backend/utils)",
+      "Bash(python -c \"import sys; sys.path.append(''backend''); from backend.main import app; print(''Backend application imports successfully'')\")",
+      "Bash(uvicorn main:app --host 0.0.0.0 --port 8000)",
+      "Bash(PYTHONPATH=. uvicorn backend.main:app --host 0.0.0.0 --port 8000)",
+      "Bash(curl -s http://localhost:8000/health)",
+      "Bash(curl -s http://localhost:8000/api/v1/chatbot/health)",
+      "Bash(curl -s http://localhost:8000/)",
+      "Bash(npm install)",
+      "Bash(node --version)",
+      "Bash(npm run start)",
+      "Bash(npx docusaurus start)",
+      "SlashCommand(/sp.analyze)",
+      "Bash(echo '<svg xmlns=\"\"http://www.w3.org/2000/svg\"\" viewBox=\"\"0 0 400 200\"\"><rect width=\"\"400\"\" height=\"\"200\"\" fill=\"\"#222\"\"/><text x=\"\"200\"\" y=\"\"100\"\" font-family=\"\"Arial\"\" font-size=\"\"24\"\" fill=\"\"white\"\" text-anchor=\"\"middle\"\" dominant-baseline=\"\"middle\"\">Physical AI &amp; Humanoid Robotics</text></svg>')",
+      "Bash(taskkill /F /IM node.exe)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

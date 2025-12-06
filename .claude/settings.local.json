@@ -33,7 +33,8 @@
       "Bash(git add .github/workflows/deploy.yml)",
       "Bash(git add -f .github/workflows/deploy.yml)",
       "Bash(git commit -m \"Fix GitHub Actions workflow for Docusaurus site deployment\")",
-      "Bash(git push origin 001-textbook-spec)"
+      "Bash(git push origin 001-textbook-spec)",
+      "Bash(npm run build)"
     ],
     "deny": [],
     "ask": []

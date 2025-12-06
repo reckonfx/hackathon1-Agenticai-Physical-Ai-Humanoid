@@ -3,7 +3,7 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - 001-textbook-spec  # Change this to your default branch if different
+      - main  # Deploy from main branch
   pull_request:
     branches:
       - main
@@ -26,7 +26,7 @@ jobs:
         run: npm run build
 
       - name: Deploy to GitHub Pages
-        if: github.ref == 'refs/heads/001-textbook-spec'  # Change this to your default branch if different
+        if: github.ref == 'refs/heads/main'  # Deploy when pushing to main branch
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}

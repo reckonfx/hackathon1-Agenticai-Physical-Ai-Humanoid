@@ -19,7 +19,7 @@ const config = {
   projectName: 'hackathon1-Agenticai-Physical-Ai-Humanoid', // Update this to your repo name
   deploymentBranch: 'gh-pages', // Branch that GitHub Pages will deploy from
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set useful

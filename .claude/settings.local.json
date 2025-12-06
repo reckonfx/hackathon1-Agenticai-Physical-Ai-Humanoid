@@ -29,7 +29,11 @@
       "Bash(npx docusaurus start)",
       "SlashCommand(/sp.analyze)",
       "Bash(echo '<svg xmlns=\"\"http://www.w3.org/2000/svg\"\" viewBox=\"\"0 0 400 200\"\"><rect width=\"\"400\"\" height=\"\"200\"\" fill=\"\"#222\"\"/><text x=\"\"200\"\" y=\"\"100\"\" font-family=\"\"Arial\"\" font-size=\"\"24\"\" fill=\"\"white\"\" text-anchor=\"\"middle\"\" dominant-baseline=\"\"middle\"\">Physical AI &amp; Humanoid Robotics</text></svg>')",
-      "Bash(taskkill /F /IM node.exe)"
+      "Bash(taskkill /F /IM node.exe)",
+      "Bash(git add .github/workflows/deploy.yml)",
+      "Bash(git add -f .github/workflows/deploy.yml)",
+      "Bash(git commit -m \"Fix GitHub Actions workflow for Docusaurus site deployment\")",
+      "Bash(git push origin 001-textbook-spec)"
     ],
     "deny": [],
     "ask": []
